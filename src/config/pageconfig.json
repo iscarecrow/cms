@@ -1,0 +1,62 @@
+{
+  "文章-匠人活动": {
+    "mods": ["articleJr","articleComment"]
+  },
+  "文章-视频直播": {
+    "mods": ["videoLive", "activityIntro", "articleComment"]
+  },
+  "文章-申领试用": {
+    "mods": ["tryApply", "activityIntro", "articleComment"]
+  },
+  "文章-普通商业": {
+    "mods": ["imageAutoNodistance", "titleBigsize", "articleHeaderInfo", "textNormal", "imageMargin", "textNormal", "hrPointBig", "titleLineAbout", "textNormal", "imageMargin", "textNormal", "titleIconLeft", "oneGoodsAllborder", "titleIconLeft", "youliaoBuyIDsDiscount", "goodsAbout"]
+  },
+  "专场": {
+    "mods": ["topicsBanner", "topicsGreytxt", "oneGoodsNoborder", "goodsThreecolTab"]
+  },
+  "商品排行榜": {
+    "mods": ["appDownloadNew", "sdkShare", "shopRankBanner", "shopRankGoodsItem", "shopRankGoodsItemCircle"]
+  },
+  "有料基础": {
+    "mods": ["appSetNavCar", "youliaoIntro", "youliaoIntroTitle", "youliaoIntroImage", "youliaoTextJulines", "youliaoBuy"]
+  },
+  "幸福周末": {
+    "mods": ["weekEndHead", "weekEndCouponMult", "weekEndCouponSingle", "weekEndGoodsTmpl"]
+  },
+  "一元许愿": {
+    "mods": ["sdkShare", "yiyuanWishHeader", "yiyuanWishGoodlist"]
+  },
+  "一元许愿结果公布": {
+    "mods": ["yiyuanWishResultBlank", "weekEndHead", "yiyuanWishResultBanner", "yiyuanWishResultList"]
+  },
+  "周榜": {
+    "mods": ["appDownloadNew", "sdkShare", "articleWeeklistBanner", "articleWeeklistSeparat", "articleWeeklistOne", "articleWeeklistTwo", "articleWeeklistSeparatTwo", "articleWeeklistTwo", "articleWeeklistMoreArticle", "articleWeeklistSeePrev", "articleWeeklistWebfoot"]
+  },
+  "周榜-查看往期": {
+    "mods": ["appDownloadNew", "sdkShare", "articleWeekprevNav", "navtabContainer", "articleWeeklistWebfoot"]
+  },
+  "月榜": {
+    "mods": ["appDownloadNew", "sdkShare", "articleWeeklistBanner", "articleWeekprevSeparat", "articleWeeklistOne", "articleWeeklistWebfoot"]
+  },
+  "月榜分类": {
+    "mods": ["appDownloadNew", "sdkShare", "articleMonthcateNav", "navtabContainer", "articleWeeklistWebfoot"]
+  },
+  "达人榜": {
+    "mods": ["appDownloadNew", "sdkShare", "talentListNav", "navtabContainer", "articleWeeklistWebfoot"]
+  },
+  "征文－投稿期": {
+    "mods": ["sdkShare", "essaycontBanner", "essaycontCollectTheme", "essaycontCollectDeadline", "essaycontCollectPrize", "essaycontCollectClaim", "essaycontCollectWay", "essaycontCollectGoodessay", "essaycontCollectJoin", "articleWeeklistWebfoot", "disclaimer"]
+  },
+  "征文－优秀作品": {
+    "mods": ["sdkShare", "essaycontBanner", "essaycontGoodTitle", "essaycontGoodList", "articleWeeklistWebfoot", "disclaimer"]
+  },
+  "投票": {
+    "mods": ["sdkShare", "createBlog", "voteBanner", "voteList"]
+  },
+  "新版专栏": {
+    "mods": ["columnBanner", "columnContent"]
+  },
+  "征文－公布期": {
+    "mods": ["sdkShare", "essaycontBanner", "essaycontPublicTitle", "essaycontPublicNotice", "essaycontPublicList", "essaycontPublicSeemore", "articleWeeklistWebfoot", "disclaimer"]
+  }
+}

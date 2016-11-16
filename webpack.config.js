@@ -1,15 +1,23 @@
 'use strict';
+var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: "./src/app.js",
-    output: {
-      path: __dirname,
-      filename: "./public/javascripts/bundle.js"
-    },
-    module: {
-      loaders: [
-        { test: /\.css$/, loader: "style!css" }
-      ]
-    }
+  entry:{
+    "app":"./src/app",
+    "editor": "./src/editor"
+  },
+  output: {
+    path: path.join(__dirname, "./public/javascripts/"),
+    filename: "[name].js",
+    chunkFilename: "[id].js"
+  },
+  module: {
+    loaders: [{
+    test: /\.jsx?$/,
+    exclude: /node_modules/,
+    loader: 'babel',
+    query: {"presets": ["es2015", "stage-0"]}
+    },{ test: /\.css$/, loader: "style!css" }]
+  }
 };

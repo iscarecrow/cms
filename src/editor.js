@@ -1,9 +1,11 @@
 import $ from 'jquery';
 import jQuery from 'jquery';
 import embedJs from './editor/embedJs';
-import a from './editor/jquery-ui.min';
+import a from './plugin/jquery-ui.min';
 import MediumEditor from './editor/medium-editor/medium-editor';
 import DtPlatform from './utils/dtPlatform';
+import initModule from './editor/initModule';
+
 
 // 前台展示
 import setNavigationShoppingCar from './part/setNavigationShoppingCar';
@@ -26,7 +28,29 @@ $(function(){
   // 拖拽功能 module 注入可操作panel，此行代码要先于 jsmodule
   $('.cms-module').parent().sortable({ handle: ".cms-show-tool" });
 
+  //页面加载自动高度
+  embedJs.setSelfHeightAuto();
+
   $('.cms-show-tool').disableSelection();
+
+  // 模块工具栏
+  $D.on('mouseenter', '.cms-module-div', function(e) {
+    $(this).find('.cms-tools').show();
+  });
+
+  $D.on('mouseleave', '.cms-module-div', function(e) {
+    $(this).find('.cms-tools').hide();
+  });
+
+  // 功能按钮事件绑定 复制当前节点
+  $D.on('click', '.cms-add', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    let $origin = $(this).closest('.cms-module');
+    embedJs.cmsCreatePage($origin);
+    embedJs.cmsPopAddPanel();
+  }); 
+
 
   // 富文本编辑
   var editor = new MediumEditor('.cms-module', {
@@ -74,12 +98,6 @@ $(function(){
     }
   });
 
-
-  //页面加载自动高度
-  window.onload = function() {
-    embedJs.setSelfHeightAuto();
-  };
-
   // 功能按钮事件绑定 复制当前节点
   $D.on('click', '.cms-add', function(e) {
     e.preventDefault();
@@ -95,28 +113,29 @@ $(function(){
       var $t = $(this);
       var $origin = $t.closest('.cms-module');
       $t.addClass('cms-icon-trans');
-
       // 保存html代码块到 localStorage
       var html = $origin.get(0).outerHTML;
-      html = html.replace(/<[a-zA-Z0-9]+ [^>]*\bclass=[\'\"][^\'\"]*\bmedium-editor-element\b[^\'\"]*[\'\"][^>]*>/ig, function(a, b) {//富文本编辑属性全部去掉
-        var ret = a.replace(/ contenteditable=[\'\"][\w\W]*?[\'\"]/ig, '')
-        .replace(/ spellcheck=[\'\"][\w\W]*?[\'\"]/ig, '')
-        .replace(/ data-medium-editor-element=[\'\"][\w\W]*?[\'\"]/ig, '')
-        .replace(/ role=[\'\"][\w\W]*?[\'\"]/ig, '')
-        .replace(/ aria-multiline=[\'\"][\w\W]*?[\'\"]/ig, '')
-        .replace(/ data-medium-editor-editor-index=[\'\"][\w\W]*?[\'\"]/ig, '')
-        .replace(/ medium-editor-index=[\'\"][\w\W]*?[\'\"]/ig, '')
-        .replace(/ data-placeholder=[\'\"][\w\W]*?[\'\"]/ig, '')
-        .replace(/ data-medium-focused=[\'\"][\w\W]*?[\'\"]/ig, '')
-        .replace(/medium-editor-placeholder/ig, '');
 
-        return ret;
-      }).replace(/([^>]*\bclass=[\'\"][^\'\"]*)\bmedium-editor-element\b/ig,'$1')//富文本编辑class滤掉
+      //富文本编辑class滤掉
+      // html = html.replace(/<[a-zA-Z0-9]+ [^>]*\bclass=[\'\"][^\'\"]*\bmedium-editor-element\b[^\'\"]*[\'\"][^>]*>/ig, function(a, b) {//富文本编辑属性全部去掉
+      //   var ret = a.replace(/ contenteditable=[\'\"][\w\W]*?[\'\"]/ig, '')
+      //   .replace(/ spellcheck=[\'\"][\w\W]*?[\'\"]/ig, '')
+      //   .replace(/ data-medium-editor-element=[\'\"][\w\W]*?[\'\"]/ig, '')
+      //   .replace(/ role=[\'\"][\w\W]*?[\'\"]/ig, '')
+      //   .replace(/ aria-multiline=[\'\"][\w\W]*?[\'\"]/ig, '')
+      //   .replace(/ data-medium-editor-editor-index=[\'\"][\w\W]*?[\'\"]/ig, '')
+      //   .replace(/ medium-editor-index=[\'\"][\w\W]*?[\'\"]/ig, '')
+      //   .replace(/ data-placeholder=[\'\"][\w\W]*?[\'\"]/ig, '')
+      //   .replace(/ data-medium-focused=[\'\"][\w\W]*?[\'\"]/ig, '')
+      //   .replace(/medium-editor-placeholder/ig, '');
+
+      //   return ret;
+      // }).replace(/([^>]*\bclass=[\'\"][^\'\"]*)\bmedium-editor-element\b/ig,'$1')
+
       localStorage.setItem('cms-copy', html);
       // 清理掉之前保存的内容
       localStorage.setItem('cms-copy-style', '');
       localStorage.setItem('cms-copy-script', '');
-
 
       var classes = $origin.attr('class');
       if (classes.indexOf('cpmodule-') == -1) {
@@ -137,7 +156,6 @@ $(function(){
             var relatedModules = [cpmodule];
             var styles = '';
             var inscript = '';
-
             // 寻找子模块
             $origin.find('.cms-module').each(function(i, el) {
               var $el = $(el);
@@ -214,6 +232,7 @@ $(function(){
       alert('您使用的浏览器不支持复制功能，请换成webkit内核比如chrome浏览器。');
     });
   }
+
 
   // 功能按钮事件绑定 删除当前节点
   $D.on('click', '.cms-delete', function(e) {
@@ -471,62 +490,50 @@ $(function(){
     });
   }
 
-  /**
-   * [addNewNode description]
-   * @param       {[type]} $target                  [位置]
-   * @param       {[type]} html                     [添加的内容]
-   * @param       {[type]} dir                      [添加的方向]
-   * @description  添加节点
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-02-23T11:50:23+0800
-   */
-  function addNewNode($target, html, dir) {
-    var $copy = $(html);
-    var $copywrap = $('<div></div>');
-
-    if (dir == 'down') {
-      $target.after('\n');
-      $target.after($copywrap);
-    } else {
-      $target.before($copywrap);
-      $target.before('\n');
-    }
-    $copywrap.css({
-      "overflow": "hidden",
-      "height": 0
-    });
-    $copy.appendTo($copywrap);
-    var opheight = $copy.height();
-    $copywrap.addClass('cms-animating')
-      .css({
-        "opacity": 0
-      })
-      .animate({
-        "opacity": 1,
-        "height": opheight
-      }, function() {
-        $copy.removeClass('cms-animating').unwrap();
-        // embedJs.cmsSetSelfHeight();
-      });
-    // 拖拽功能 module 注入可操作panel，此行代码要先于 jsmodule
-    $('.cms-module').parent().sortable({ handle: ".cms-show-tool" });
-    $('.cms-show-tool').disableSelection();
-    if(editor.elements.length>0){
-      editor.addElements('.cms-module');
-    }else{
-      editor = new MediumEditor('.cms-module',{
-        toolbar: {
-          buttons: ['colorPicker', 'fontsize', 'italic', 'underline', 'strikethrough', 'anchor', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'removeFormat']
-        },
-        extensions: {
-          'colorPicker': new MediumEditor.ColorPickerExtension()
-        }
-      });
-    }
-
-  }
-  window.addNewNode = addNewNode;
+  // function addNewNode($target, html, dir) {
+  //   var $copy = $(html);
+  //   var $copywrap = $('<div></div>');
+  //   if (dir == 'down') {
+  //     $target.after('\n');
+  //     $target.after($copywrap);
+  //   } else {
+  //     $target.before($copywrap);
+  //     $target.before('\n');
+  //   }
+  //   $copywrap.css({
+  //     "overflow": "hidden",
+  //     "height": 0
+  //   });
+  //   $copy.appendTo($copywrap);
+  //   var opheight = $copy.height();
+  //   $copywrap.addClass('cms-animating')
+  //     .css({
+  //       "opacity": 0
+  //     })
+  //     .animate({
+  //       "opacity": 1,
+  //       "height": opheight
+  //     }, function() {
+  //       $copy.removeClass('cms-animating').unwrap();
+  //       // embedJs.cmsSetSelfHeight();
+  //     });
+  //   // 拖拽功能 module 注入可操作panel，此行代码要先于 jsmodule
+  //   $('.cms-module').parent().sortable({ handle: ".cms-show-tool" });
+  //   $('.cms-show-tool').disableSelection();
+  //   if(editor.elements.length>0){
+  //     editor.addElements('.cms-module');
+  //   }else{
+  //     editor = new MediumEditor('.cms-module',{
+  //       toolbar: {
+  //         buttons: ['colorPicker', 'fontsize', 'italic', 'underline', 'strikethrough', 'anchor', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'removeFormat']
+  //       },
+  //       extensions: {
+  //         'colorPicker': new MediumEditor.ColorPickerExtension()
+  //       }
+  //     });
+  //   }
+  // }
+  // window.addNewNode = addNewNode;
 
   // 文本节点，可编辑
   function popEditPanel() {
@@ -670,71 +677,4 @@ $(function(){
     return returnHtml;
   }
 
-
-  function initModule(extendName) {
-    var extendNameWithData = "data-" + extendName;
-    var $module = $('[' + extendNameWithData + ']');
-    var _cmsFocus = embedJs.cmsFocus;
-    $module.find('.cms-module-div .cms-integral').on('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      var $t = $(this).closest('.cms-module');
-      var config = $t.data(extendName);
-      if (typeof config == 'object') {
-        _cmsFocus.clear();
-        _cmsFocus.set(extendName, config);
-        _cmsFocus._root = $t;
-        _cmsFocus._customtype = extendName;
-        _cmsFocus._callback = function($el, type, val) {
-          if (val && typeof val == 'object') {
-            // 修改 data-[modulename] 值，然后重新加载子页面
-            var _oldConfig = $el.data(_cmsFocus._customtype);
-            for(var key in val){
-              if(_oldConfig[key].hasOwnProperty('value')){
-                _oldConfig[key].value = val[key];
-              }else{
-                _oldConfig[key] = val[key];
-              }
-            }
-            $el.attr('data-' + _cmsFocus._customtype, JSON.stringify(_oldConfig));
-            embedJs.cmsReloadModifiedPage();
-          }
-        }
-        popEditPanel(extendName);
-      }
-    });
-  }
-
-  function popEditPanel(extendName) {
-    var htmlstr = '',
-      _cmsFocus = embedJs.cmsFocus;
-    for (var name in _cmsFocus[extendName]) {
-      var itemval = _cmsFocus[extendName][name];
-      var showname = name;
-      if(jQuery.isPlainObject(itemval)){
-        var propertyStr = '';
-        for (var name in itemval) {
-          propertyStr += '" '+name+'="'+ itemval[name];
-        }
-        htmlstr += [
-          '<li><u>', showname, '</u><input type="text" name="', showname, propertyStr, '"/></li>'
-        ].join('');
-      }else{
-        htmlstr += [
-          '<li><u>', showname, '</u><input type="text" name="', name, '" value="', itemval, '"/></li>'
-        ].join('');
-      }
-
-    }
-
-    var $lis = $(htmlstr);
-
-    // 调用父亲窗口的 popout 弹框方法
-    embedJs.cmsPopEditPanel($lis, extendName);
-  }
-
-
 });
-
-console.log(embedJs);

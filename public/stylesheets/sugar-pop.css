@@ -1,0 +1,55 @@
+/*
+@说明：弹出遮罩对应的css样式，此文件与 sugar-main.js 文件里的功能一一对应
+@作者：balibell
+@时间：2013-07-11
+@修改： 拆分为两部分  sugai-main-ext
+*/
+
+.mask-body{position:relative;overflow:hidden;background-color:#fff;border:#B0B0B0;box-shadow:0px 2px 8px rgba(0, 0, 0, 0.2),0px 0px 5px rgba(0, 0, 0, 0.2);border-radius:4px}
+.mask-cont{padding:0 0 0 0}
+.tt-s{height:46px;padding:0;font-size:16px;font-weight:bold;line-height:46px;border-bottom:1px solid #ebebeb;overflow:hidden;color:#606060;text-align: center;position: relative;}
+/* 弹出框的右上关闭按钮 */
+a.mask-close:link, a.mask-close:visited{float:right;width:46px;height:46px;line-height:46px;text-indent:-9999px;background-image: url('/static/images/popclose.png');background-repeat:no-repeat;background-position:15px 15px;position: absolute;right: 0;top: 0;}
+a.mask-close:hover{background-position:-17px -17px;}
+
+.mask{display:none;width:100%;position:absolute;left:0;top:0;z-index:9999;}
+.mask-bg{height:100%;opacity:.8;filter:alpha(opacity=80);background-color:#000;}
+.mask-ct{position:absolute;top:0;left:0;width:100%;}
+.mask-pop{display:none;position:fixed;_position:absolute;top:0;left:0;overflow:hidden;table-layout:fixed;z-index:9999}
+.mask-fm{display:none;_display:block;_position:absolute;_left:0;_top:0;margin:0;opacity:0;filter:alpha(opacity=0);}
+
+
+.mask-wrap{border:2px solid #333;}
+.mask-focus{width:0;height:0;overflow:hidden;}
+.mask-block{background-color:#fff;}
+/*.mask-waiting{background:#fff url(../../../../img/0/waiting.gif) right bottom no-repeat}*/
+
+
+
+.mask-bars{padding:8px 16px 16px}
+.mask-bars a{margin:0 8px 0 0;}
+
+
+
+a.mbtn-b{font-size:14px;font-weight:bold;text-align:center;width:84px;height:27px;overflow:hidden;line-height:30px;text-decoration:none !important;background-image:url(http://img.china.alibaba.com/images/BRMS/main2.gif);background-repeat:no-repeat;}
+a.mbtn-b:link,a.mbtn-b:visited{color:#333;background-position:0 -80px;}
+a.mbtn-b:hover{color:#333;background-position:-90px -80px;}
+
+/*/ .mask-bars{border:1px solid red} /**/
+
+.popmess{zoom:1}
+.popmess:after{content:"\0020";display:block;height:0;clear:both;}
+
+
+
+#mask-pop-1{width:582px;}
+#mask-pop-1 .bpng{width:595px;}
+#mask-pop-1 .popin{text-align:center;}
+
+#mask-pop-0{width:412px;}
+#mask-pop-0 .bpng{width:425px;}
+#mask-pop-0 .popin{text-align:center;padding:8px;}
+#mask-pop-0 .popmess{padding:20px 8px 20px 8px;font-size:14px;line-height:25px;}
+
+
+

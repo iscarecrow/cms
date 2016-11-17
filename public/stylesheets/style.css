@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #666;
+  background: #f5f5f5;
 }
 
 a {
@@ -24,7 +24,16 @@ a {
   width: 20%;
   /* background: #000; */
 }
-
+.cms_cnt_l ul {
+  /* list-style: none; */
+}
+.cms_cnt_l ul li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+.cms_cnt_l ul li:hover{
+  color: green;
+}
 .cms_cnt_r{
   width: 80%;
   background: #fff;
@@ -37,13 +46,19 @@ a {
 .embed-init{
   /* background: green; */
 }
-
+/* 
 .menu-modules:hover {
   cursor: pointer
 }
-
+ */
 #embed-iframe {
   max-width: 640px;
   margin: 0 auto;
   display: block;
-}  
+}
+#embed-iframe html{
+  background: #fff;
+}
+#win-house {
+  display: none
+}

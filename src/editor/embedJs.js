@@ -1,3 +1,7 @@
+import cmsTools from '../utils/cmsTools';
+import addNewNode from './addNewNode';
+import initModule from './initModule';
+
 let embedJs = {
   /**
    * [cmsFocus 记录focus位置]
@@ -61,72 +65,6 @@ let embedJs = {
   cmsReloadModifiedPage: function() {
     if (parent && parent.embedParent.reloadModifiedPage) {
       parent.embedParent.reloadModifiedPage();
-    }
-  },
-  /**
-   * [addParam description]
-   * @param       {[type]} url                      [url]
-   * @param       {[type]} param                    [参数]
-   * @param       {[type]} value                    [parm值]
-   * @description 增加一个参数，如果已经存在，替换原参数值
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-02-23T11:12:38+0800
-   */
-  addParam: function(url, param, value) {
-    var re = new RegExp('([&\\?])' + param + '=[^& ]*', 'g');
-    url = url.replace(re, function(a, b) {
-      return b == '?' ? '?' : '';
-    });
-
-    var idx = url.indexOf('?');
-    url += (idx > -1 ? idx + 1 != url.length ? '&' : '' : '?') + param + '=' + value;
-    return url;
-  },
-  /**
-   * [removeParam description]
-   * @param       {[type]} url                      [url]
-   * @param       {[type]} pnm                      [参数名]
-   * @description  search字符串，删除其中的某一个参数
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-02-23T11:13:33+0800
-   */
-  removeParam: function(url, pnm) {
-    var reg1 = new RegExp('\\?' + pnm + '(=[^&]*)?'),
-      reg2 = new RegExp('\\&' + pnm + '(=[^&]*)?');
-
-    return url.replace(reg1, '?').replace(reg2, '').replace(/\?&/, '?').replace(/\?$/, '');
-  },
-  /**
-   * [cmsProperateImage description]
-   * @param       {[type]} url                      [待处理的url地址]
-   * @param       {[type]} t                        [转换类型  默认0-返回原图  1-返回缩略图]
-   * @param       {[type]} w                        [返回缩略图的宽]
-   * @param       {[type]} h                        [返回缩略图的高]
-   * @param       {[type]} c                        [是否截取正方形 a-左边截图  b-右边截图 c-中间截图]
-   * @description
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-02-23T10:25:13+0800
-   */
-  cmsProperateImage: function(url, t, w, h, c) {
-    var pathn = $.trim(url).replace(/^http(s)?:\/\//ig, ''),
-      pathn = pathn.split('/'),
-      domain = pathn[0],
-      pathn = pathn[1];
-
-    // 只有堆糖域名下 uploads misc 目录下的图片可以缩略
-    if (domain.indexOf('duitang.com') == -1 || !pathn || pathn != 'uploads' && pathn != 'misc') {
-      return url;
-    }
-    if (t) {
-      w = w || 0;
-      h = h || 0;
-      c = c ? '_' + c : '';
-      return this.cmsProperateImage(url).replace(/(\.[a-z_]+)$/ig, '.thumb.' + w + '_' + h + c + '$1');
-    } else {
-      return url.replace(/(?:\.thumb\.\w+|\.[a-z]+!\w+)(\.[a-z_]+)$/ig, '$1');
     }
   },
   /**
@@ -199,7 +137,7 @@ let embedJs = {
             var imgsrc = obj.val;
             var useorigin = obj.useorigin;
             if (useorigin) {
-              imgsrc = embedJs.cmsProperateImage(imgsrc);
+              imgsrc = cmsTools.dtImageTrans(imgsrc);
             } else {
               var crop = obj.crop;
               var imgw = parseInt(obj.width);
@@ -207,10 +145,10 @@ let embedJs = {
               var pimgw = 0;
               if (imgw && !crop) {
                 pimgw = embedJs.cmsProperateImageWidth(imgw);
-                imgsrc = embedJs.cmsProperateImage(imgsrc, true, pimgw);
+                imgsrc = cmsTools.dtImageTrans(imgsrc, true, pimgw);
               } else if (imgw && imgh && crop) {
                 pimgw = embedJs.cmsProperateImageWidth(imgw);
-                imgsrc = embedJs.cmsProperateImage(imgsrc, true, pimgw, pimgw, "c");
+                imgsrc = cmsTools.dtImageTrans(imgsrc, true, pimgw, pimgw, "c");
               }
             }
 
@@ -240,9 +178,9 @@ let embedJs = {
             // 默认情况下 pageweb 为空，不设置此参数
             var paramname = '__urlopentype';
             if (pageweb) {
-              nhref = embedJs.addParam(nhref, paramname, pageweb);
+              nhref = cmsTools.addParam(nhref, paramname, pageweb);
             } else {
-              nhref = embedJs.removeParam(nhref, paramname);
+              nhref = cmsTools.removeParam(nhref, paramname);
             }
             elem.attr('href', nhref);
             break;
@@ -257,7 +195,6 @@ let embedJs = {
             elem.attr('poster', posterImg);
             break;
         }
-
         if (embedJs.cmsFocus._customtype && obj.type == embedJs.cmsFocus._customtype) {
           $.isFunction(embedJs.cmsFocus._callback) && embedJs.cmsFocus._callback(elem, embedJs.cmsFocus._customtype, obj.val);
         }
@@ -322,7 +259,7 @@ let embedJs = {
    */
   cmsPopAddPanel: function() {
     var $pop = $('<div class="cms-prompt"><div id="cms-addmodule-quickly" style="padding: 10px"><a id="cms-addmodule-new" direction="up" href="javascript:;">在当前模块前添加新模块</a><a id="cms-addmodule-new" direction="down" href="javascript:;">在当前模块后添加新模块</a><br><a id="cms-addmodule-current" href="javascript:;">复制添加当前模块</a>' + (localStorage && localStorage["cms-copy"] ? '<br><a class="cms-addmodule-storage" direction="up" href="javascript:;">添加拷贝模块↑ </a><a class="cms-addmodule-storage" direction="down" href="javascript:;">添加拷贝模块↓ </a>' : '') + '<br><a class="cms-addmodule-space" href="javascript:;" ht="24">添加空行(小)</a><a class="cms-addmodule-space" href="javascript:;" ht="40">添加空行(中)</a><a class="cms-addmodule-space" href="javascript:;" ht="60">添加空行(大)</a></div></div>');
-
+    console.log($pop);
     // 调用父亲窗口的 popout 弹框方法
     parent && parent.embedParent.popOut && parent.embedParent.popOut(['添加', $pop]);
   },
@@ -383,17 +320,8 @@ let embedJs = {
     // 隐藏区块设置 cms-attribute-style
     $('.cms-attribute-hidden').attr('cms-attribute-style', 'display:none;');
   },
-  /**
-   * [cmsCreatePage]
-   * @return      {[type]} [description]
-   * @param       {[object]} _root                    [根节点]
-   * @description  创建页面
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-03-17T01:36:53+0800
-   */
   cmsCreatePage: function(_root) {
-    var cmsFocus = embedJs.cmsFocus;
+    var cmsFocus = this.cmsFocus;
     cmsFocus.clear();
     cmsFocus._root = _root;
     cmsFocus._callback = function($newhtml, newstyle, newscript, dir) {
@@ -425,7 +353,7 @@ let embedJs = {
           if ($jspgmd.length === 0) {
             // 同时生成临时html模块
             var $jsm = $('<section class="cms-embed cpmodule-jsmodule-occupy"><p class="cms-jsmodule-occupy">JS Module: ' + _mod + '</p></section>');
-            embedJs.cmsBuildPanel($jsm, {
+            this.cmsBuildPanel($jsm, {
               "copy": true,
             });
             $jsm.prependTo('body');

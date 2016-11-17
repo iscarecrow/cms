@@ -7,18 +7,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(function() {
-      return (root.DtTools = factory());
+      return (root.cmsTools = factory());
     });
 
   } else if (typeof exports === 'object') {
     module.exports = factory();
 
   } else {
-    root.DtTools = factory();
+    root.cmsTools = factory();
   }
 }(this || global, function() {
-  var DtTools = {};
-  DtTools.VERSION = '0.0.1';
+  var cmsTools = {};
+  cmsTools.VERSION = '0.0.1';
   /**
    * [dtImageTrans description]
    * @param       {[string]}                 url [图片url]
@@ -31,7 +31,7 @@
    * @author      hugin
    * @updateTime  2016-02-03T13:58:54+0800
    */
-  DtTools.dtImageTrans = function(url, t, w, h, c) {
+  cmsTools.dtImageTrans = function(url, t, w, h, c) {
     var pathn = url.trim().replace(/^http(s)?:\/\//ig, '');
     var pathn_array = pathn.split('/');
     var domain = pathn_array[0];
@@ -55,7 +55,7 @@
    * @author      hugin
    * @updateTime  2016-02-03T14:22:39+0800
    */
-  DtTools.dtUriTrans = function(uri, data) {
+  cmsTools.dtUriTrans = function(uri, data) {
     if (data == undefined) {
       return uri;
     } else {
@@ -78,7 +78,7 @@
    * @author      hugin<hxjlucky@gmail.com>
    * @updateTime  2016-02-17T14:19:40+0800
    */
-  DtTools.getParams = function(url) {
+  cmsTools.getParams = function(url) {
     if (!url) url = window.location.href;
     var opts = {},
       name, value, i;
@@ -102,7 +102,7 @@
     return opts;
   };
 
-  DtTools.addParam = function(url, param, value) {
+  cmsTools.addParam = function(url, param, value) {
     var re = new RegExp('([&\\?])' + param + '=[^& ]*', 'g');
 
     url = url.replace(re, function(a, b) {
@@ -112,6 +112,6 @@
     url += (idx > -1 ? idx + 1 != url.length ? '&' : '' : '?') + param + '=' + value;
     return url
   };
-  return DtTools;
+  return cmsTools;
 
 }));

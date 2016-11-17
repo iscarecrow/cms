@@ -4,82 +4,82 @@
     {
       "id":"articleJr",
       "name":"匠人活动",
-      "url": "guide2/js/modules/article-jr.html",
+      "url": "javascripts/cmsModules/article-jr.html",
       "opt": {
         "add": true,
         "copy": false,
         "integral": false
       },
-      "css": "guide2/js/modules/article-jr.css",
-      "js": ["guide2/js/modules/article-jr.js"]
+      "css": "javascripts/cmsModules/article-jr.css",
+      "js": ["javascripts/cmsModules/article-jr.js"]
     },
     {
       "id":"videoLive",
       "name":"视频直播",
-      "url": "guide2/js/modules/article-video-live.html",
+      "url": "javascripts/cmsModules/article-video-live.html",
       "opt": {
         "add": true,
         "copy": false,
         "integral": false
       },
-      "css": "guide2/js/modules/article-video-live.css",
-      "js": ["guide2/js/modules/article-video-live.js"]
+      "css": "javascripts/cmsModules/article-video-live.css",
+      "js": ["javascripts/cmsModules/article-video-live.js"]
     },{
       "id":"tryApply",
       "name":"申领试用",
-      "url": "guide2/js/modules/article-try-apply.html",
+      "url": "javascripts/cmsModules/article-try-apply.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "css": "guide2/js/modules/article-try-apply.css",
-      "js": ["guide2/js/modules/article-try-apply.js"]
+      "css": "javascripts/cmsModules/article-try-apply.css",
+      "js": ["javascripts/cmsModules/article-try-apply.js"]
     },{
       "id":"applyList",
       "name":"申请名单",
-      "url": "guide2/js/modules/article-apply-list.html",
+      "url": "javascripts/cmsModules/article-apply-list.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "css": "guide2/js/modules/article-apply-list.css",
+      "css": "javascripts/cmsModules/article-apply-list.css",
       "js": []
     },{
       "id":"activityIntro",
       "name":"活动介绍",
-      "url": "guide2/js/modules/article-activity-intro.html",
+      "url": "javascripts/cmsModules/article-activity-intro.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "css": "guide2/js/modules/article-activity-intro.css",
-      "js": ["guide2/js/modules/article-activity-intro.js"]
+      "css": "javascripts/cmsModules/article-activity-intro.css",
+      "js": ["javascripts/cmsModules/article-activity-intro.js"]
     },{
       "id":"articleHeaderInfo",
       "name":"文章头部信息",
-      "url": "guide2/js/modules/article-header-info.html",
+      "url": "javascripts/cmsModules/article-header-info.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "css": "guide2/js/modules/article-header-info.css",
-      "js": ["guide2/js/modules/article-header-info.js"]
+      "css": "javascripts/cmsModules/article-header-info.css",
+      "js": ["javascripts/cmsModules/article-header-info.js"]
       
     },{
       "id":"articleComment",
       "name":"文章评论",
-      "url": "guide2/js/modules/article-comment.html",
+      "url": "javascripts/cmsModules/article-comment.html",
       "opt": {
         "add": true,
         "copy": false,
         "integral": false
       },
-      "css": "guide2/js/modules/article-comment.css",
-      "js": ["guide2/js/modules/article-comment.js"]
+      "css": "javascripts/cmsModules/article-comment.css",
+      "js": ["javascripts/cmsModules/article-comment.js"]
     }
   ]
 },{
@@ -87,83 +87,83 @@
   "inner_mods":[{
       "id": "swiperMod",
       "name": "轮播容器",
-      "url": "guide2/js/modules/swiper-mod.html",
+      "url": "javascripts/cmsModules/swiper-mod.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "js": ["guide2/js/modules/swiper.js","guide2/js/modules/swiper-mod.js"],
-      "css": "guide2/js/modules/swiper-mod.css"
+      "js": ["javascripts/cmsModules/swiper.js","javascripts/cmsModules/swiper-mod.js"],
+      "css": "javascripts/cmsModules/swiper-mod.css"
   },{
       "id": "videoMod",
       "name": "视频",
-      "url": "guide2/js/modules/video-mod.html",
+      "url": "javascripts/cmsModules/video-mod.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "js": ["guide2/js/modules/video-mod.js"],
-      "css": "guide2/js/modules/video-mod.css"
+      "js": ["javascripts/cmsModules/video-mod.js"],
+      "css": "javascripts/cmsModules/video-mod.css"
   }]
 },{
   "name":"一元许愿",
   "inner_mods":[{
     "id":"yiyuanWishHeader",
     "name":"许愿列表头部",
-    "url":"guide2/js/modules/yiyuan-wish-header.html",
+    "url":"javascripts/cmsModules/yiyuan-wish-header.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/yiyuan-wish-header.css",
-    "js":["guide2/js/modules/yiyuan-wish-header.js"]
+    "css": "javascripts/cmsModules/yiyuan-wish-header.css",
+    "js":["javascripts/cmsModules/yiyuan-wish-header.js"]
   },{
     "id":"yiyuanWishGoodlist",
     "name":"许愿商品列表",
-    "url":"guide2/js/modules/yiyuan-wish-goodlist.html",
+    "url":"javascripts/cmsModules/yiyuan-wish-goodlist.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/yiyuan-wish-goodlist.css",
-    "js":["guide2/js/modules/yiyuan-wish-goodlist.js"]
+    "css": "javascripts/cmsModules/yiyuan-wish-goodlist.css",
+    "js":["javascripts/cmsModules/yiyuan-wish-goodlist.js"]
   },{
     "id":"yiyuanWishResultBanner",
     "name":"结果列表分割banner",
-    "url":"guide2/js/modules/yiyuan-wish-result-banner.html",
+    "url":"javascripts/cmsModules/yiyuan-wish-result-banner.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/yiyuan-wish-result-banner.css",
-    "js":["guide2/js/modules/yiyuan-wish-result-banner.js"]
+    "css": "javascripts/cmsModules/yiyuan-wish-result-banner.css",
+    "js":["javascripts/cmsModules/yiyuan-wish-result-banner.js"]
   },{
     "id":"yiyuanWishResultBlank",
     "name":"结果列表空状态",
-    "url":"guide2/js/modules/yiyuan-wish-result-blank.html",
+    "url":"javascripts/cmsModules/yiyuan-wish-result-blank.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/yiyuan-wish-result-blank.css",
-    "js":["guide2/js/modules/yiyuan-wish-result-blank.js"]
+    "css": "javascripts/cmsModules/yiyuan-wish-result-blank.css",
+    "js":["javascripts/cmsModules/yiyuan-wish-result-blank.js"]
   },{
     "id":"yiyuanWishResultList",
     "name":"结果列表",
-    "url":"guide2/js/modules/yiyuan-wish-result-list.html",
+    "url":"javascripts/cmsModules/yiyuan-wish-result-list.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/yiyuan-wish-result-list.css",
-    "js":["guide2/js/modules/yiyuan-wish-result-list.js"]
+    "css": "javascripts/cmsModules/yiyuan-wish-result-list.css",
+    "js":["javascripts/cmsModules/yiyuan-wish-result-list.js"]
   }]
 },{
   "name":"商品",
@@ -171,149 +171,149 @@
     "id":"youliaoProductIDsFlatten",
     "name":"单列商品-有去购买",
     "version":1,
-    "url":"guide2/js/modules/youliao-product-ids-flatten.html",
+    "url":"javascripts/cmsModules/youliao-product-ids-flatten.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-product-ids-flatten.css",
-    "js":["guide2/js/modules/youliao-product-ids-flatten.js"]
+    "css": "javascripts/cmsModules/youliao-product-ids-flatten.css",
+    "js":["javascripts/cmsModules/youliao-product-ids-flatten.js"]
   },{
     "id": "oneGoodsAllborder",
     "name": "单列商品－带框",
-    "url": "guide2/js/modules/one-goods-allborder.html",
+    "url": "javascripts/cmsModules/one-goods-allborder.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/one-goods-allborder.css",
-    "js": ["guide2/js/modules/one-goods-allborder.js"]
+    "css": "javascripts/cmsModules/one-goods-allborder.css",
+    "js": ["javascripts/cmsModules/one-goods-allborder.js"]
   },{
     "id": "oneGoodsNoborder",
     "name": "单列商品－无框",
-    "url": "guide2/js/modules/one-goods-noborder.html",
+    "url": "javascripts/cmsModules/one-goods-noborder.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/one-goods-noborder.css",
-    "js": ["guide2/js/modules/one-goods-noborder.js"]
+    "css": "javascripts/cmsModules/one-goods-noborder.css",
+    "js": ["javascripts/cmsModules/one-goods-noborder.js"]
   },{
     "id": "youliaoBuyIDsDiscount",
     "name": "两列商品(老模块)",
     "version": 1,
-    "url": "guide2/js/modules/youliao-product-ids-discount.html",
+    "url": "javascripts/cmsModules/youliao-product-ids-discount.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-product-ids-discount.css",
-    "js": ["guide2/js/modules/youliao-product-ids-discount.js"]
+    "css": "javascripts/cmsModules/youliao-product-ids-discount.css",
+    "js": ["javascripts/cmsModules/youliao-product-ids-discount.js"]
   },{
     "id": "youliaoBuyIDsDiscountNew",
     "name": "两列商品－带框(new)",
-    "url": "guide2/js/modules/youliao-product-ids-discount-new.html",
+    "url": "javascripts/cmsModules/youliao-product-ids-discount-new.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-product-ids-discount-new.css",
-    "js": ["guide2/js/modules/youliao-product-ids-discount-new.js"]
+    "css": "javascripts/cmsModules/youliao-product-ids-discount-new.css",
+    "js": ["javascripts/cmsModules/youliao-product-ids-discount-new.js"]
   },{
     "id": "twoGoodsBottomborder",
     "name": "两列商品－底框",
-    "url": "guide2/js/modules/two-goods-bottomborder.html",
+    "url": "javascripts/cmsModules/two-goods-bottomborder.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/two-goods-bottomborder.css",
-    "js": ["guide2/js/modules/two-goods-bottomborder.js"]
+    "css": "javascripts/cmsModules/two-goods-bottomborder.css",
+    "js": ["javascripts/cmsModules/two-goods-bottomborder.js"]
   },{
     "id": "weekEndGoodsTmpl",
     "name": "幸福周末－商品容器",
     "version":2,
-    "url": "guide2/js/modules/weekend-goods-tmpl.html",
+    "url": "javascripts/cmsModules/weekend-goods-tmpl.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/weekend-goods-tmpl.css",
-    "js": ["guide2/js/modules/weekend-goods-tmpl.js"]
+    "css": "javascripts/cmsModules/weekend-goods-tmpl.css",
+    "js": ["javascripts/cmsModules/weekend-goods-tmpl.js"]
   },{
     "id": "goodsThreecolTab",
     "name": "三列商品切换容器",
-    "url": "guide2/js/modules/goods-threecol-tab.html",
+    "url": "javascripts/cmsModules/goods-threecol-tab.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/goods-threecol-tab.css",
-    "js": ["guide2/js/modules/goods-threecol-tab.js"]
+    "css": "javascripts/cmsModules/goods-threecol-tab.css",
+    "js": ["javascripts/cmsModules/goods-threecol-tab.js"]
   },{
     "id": "shopRankGoodsItem",
     "name": "口碑榜－王冠",
-    "url": "guide2/js/modules/shoprank-goods-item.html",
+    "url": "javascripts/cmsModules/shoprank-goods-item.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/shoprank-goods-item.css"
+    "css": "javascripts/cmsModules/shoprank-goods-item.css"
   },{
     "id": "shopRankGoodsItemCircle",
     "name": "口碑榜－圆圈",
-    "url": "guide2/js/modules/shoprank-goods-item-circle.html",
+    "url": "javascripts/cmsModules/shoprank-goods-item-circle.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/shoprank-goods-item-circle.css"
+    "css": "javascripts/cmsModules/shoprank-goods-item-circle.css"
   },
   {
       "id": "buyGroupContainer",
       "name": "活动专场容器",
-      "url": "guide2/js/modules/buy-group-container.html",
+      "url": "javascripts/cmsModules/buy-group-container.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "js": ["guide2/js/modules/swiper.js","guide2/js/modules/buy-group-container.js"],
-      "css": "guide2/js/modules/buy-group-container.css"
+      "js": ["javascripts/cmsModules/swiper.js","javascripts/cmsModules/buy-group-container.js"],
+      "css": "javascripts/cmsModules/buy-group-container.css"
   },
   {
       "id": "buyGroup",
       "name": "活动专场",
-      "url": "guide2/js/modules/buy-group.html",
+      "url": "javascripts/cmsModules/buy-group.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "js": ["guide2/js/modules/buy-group.js"],
-      "css": "guide2/js/modules/buy-group.css"
+      "js": ["javascripts/cmsModules/buy-group.js"],
+      "css": "javascripts/cmsModules/buy-group.css"
   },
   {
       "id": "buyGroup",
       "name": "活动专场(含会员价标签)",
-      "url": "guide2/js/modules/buy-group-vip.html",
+      "url": "javascripts/cmsModules/buy-group-vip.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "js": ["guide2/js/modules/buy-group-vip.js"],
-      "css": "guide2/js/modules/buy-group-vip.css"
+      "js": ["javascripts/cmsModules/buy-group-vip.js"],
+      "css": "javascripts/cmsModules/buy-group-vip.css"
   }]
 },{
   "name":"文本",
@@ -321,932 +321,932 @@
     "id": "textBorder",
     "name": "文本－带边框",
     "version": 1,
-    "url": "guide2/js/modules/text-border.html",
+    "url": "javascripts/cmsModules/text-border.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/text-border.css"
+    "css": "javascripts/cmsModules/text-border.css"
   },{
     "id": "textNormal",
     "name": "文本－多行",
-    "url": "guide2/js/modules/text-normal.html",
+    "url": "javascripts/cmsModules/text-normal.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/text-normal.css"
+    "css": "javascripts/cmsModules/text-normal.css"
   },{
     "id": "textShadow",
     "name": "文字－阴影",
-    "url": "guide2/js/modules/text-shadow.html",
+    "url": "javascripts/cmsModules/text-shadow.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/text-shadow.css"
+    "css": "javascripts/cmsModules/text-shadow.css"
   },{
     "id": "youliaoTextJulines",
     "name": "文本－换行",
-    "url": "guide2/js/modules/youliao-text-julines.html",
+    "url": "javascripts/cmsModules/youliao-text-julines.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/topics-greytxt.css"
+    "css": "javascripts/cmsModules/topics-greytxt.css"
   },{
     "id": "topicsGreytxt",
     "name": "文本－专题（灰色）",
-    "url": "guide2/js/modules/topics-greytxt.html",
+    "url": "javascripts/cmsModules/topics-greytxt.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/topics-greytxt.css"
+    "css": "javascripts/cmsModules/topics-greytxt.css"
   },{
     "id": "titleAsidePoint",
     "name": "标题－左右点",
-    "url": "guide2/js/modules/title-aside-point.html",
+    "url": "javascripts/cmsModules/title-aside-point.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/title-aside-point.css"
+    "css": "javascripts/cmsModules/title-aside-point.css"
   },{
     "id": "titleBox",
     "name": "标题－带框",
-    "url": "guide2/js/modules/title-box.html",
+    "url": "javascripts/cmsModules/title-box.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/title-box.css"
+    "css": "javascripts/cmsModules/title-box.css"
   },{
     "id": "titleSplit",
     "name": "标题－带框2",
-    "url": "guide2/js/modules/title-split.html",
+    "url": "javascripts/cmsModules/title-split.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/title-split.css"
+    "css": "javascripts/cmsModules/title-split.css"
   },{
     "id": "youliaoIntroTitle",
     "name": "标题－介绍购买",
-    "url": "guide2/js/modules/youliao-intro-tit.html",
+    "url": "javascripts/cmsModules/youliao-intro-tit.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-intro-tit.css"
+    "css": "javascripts/cmsModules/youliao-intro-tit.css"
   },{
     "id": "titleLineAbout",
     "name": "标题－左右红色竖线",
-    "url": "guide2/js/modules/title-line-about.html",
+    "url": "javascripts/cmsModules/title-line-about.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/title-line-about.css"
+    "css": "javascripts/cmsModules/title-line-about.css"
   },{
     "id": "titleIconLeft",
     "name": "标题－左带icon",
-    "url": "guide2/js/modules/title-icon-left.html",
+    "url": "javascripts/cmsModules/title-icon-left.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/title-icon-left.css"
+    "css": "javascripts/cmsModules/title-icon-left.css"
   },{
     "id": "titleBigsize",
     "name": "标题－大字",
-    "url": "guide2/js/modules/title-bigsize.html",
+    "url": "javascripts/cmsModules/title-bigsize.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/title-bigsize.css"
+    "css": "javascripts/cmsModules/title-bigsize.css"
   }]
 },{
   "name":"图文",
   "inner_mods":[{
     "id": "imageAuto",
     "name": "图片－全屏",
-    "url": "guide2/js/modules/image-auto.html",
+    "url": "javascripts/cmsModules/image-auto.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/image-auto.css"
+    "css": "javascripts/cmsModules/image-auto.css"
   },{
     "id": "imageAutoNodistance",
     "name": "图片－全屏－无距离",
-    "url": "guide2/js/modules/image-auto-odistance.html",
+    "url": "javascripts/cmsModules/image-auto-odistance.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/image-auto-odistance.css"
+    "css": "javascripts/cmsModules/image-auto-odistance.css"
   },{
     "id": "imageAutoWithLink",
     "name": "图片全屏(可配链接无空行)",
     "version": 1,
-    "url": "guide2/js/modules/image-auto-with-link.html",
+    "url": "javascripts/cmsModules/image-auto-with-link.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/image-auto-with-link.css"
+    "css": "javascripts/cmsModules/image-auto-with-link.css"
   },{
       "id": "imageWithLimitTime",
       "name": "图片全屏(带链接,活动开始时间、文案)",
-      "url": "guide2/js/modules/image-with-limit-time.html",
+      "url": "javascripts/cmsModules/image-with-limit-time.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": true
       },
-      "js": ["guide2/js/modules/image-with-limit-time.js"],
-      "css": "guide2/js/modules/image-with-limit-time.css"
+      "js": ["javascripts/cmsModules/image-with-limit-time.js"],
+      "css": "javascripts/cmsModules/image-with-limit-time.css"
   },{
     "id": "imageMargin",
     "name": "图片－大图",
-    "url": "guide2/js/modules/image-margin.html",
+    "url": "javascripts/cmsModules/image-margin.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/image-margin.css"
+    "css": "javascripts/cmsModules/image-margin.css"
   },{
     "id": "storyRecommend",
     "name": "达人说-东西推荐",
-    "url": "guide2/js/modules/story-recommend.html",
+    "url": "javascripts/cmsModules/story-recommend.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/story-recommend.css"
+    "css": "javascripts/cmsModules/story-recommend.css"
   },{
     "id": "grassRecommend",
     "name": "种草推荐",
-    "url": "guide2/js/modules/grass-recommend.html",
+    "url": "javascripts/cmsModules/grass-recommend.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/grass-recommend.css"
+    "css": "javascripts/cmsModules/grass-recommend.css"
   },{
     "id": "peopleComm",
     "name": "评测",
-    "url": "guide2/js/modules/people-comm.html",
+    "url": "javascripts/cmsModules/people-comm.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/people-comm.css"
+    "css": "javascripts/cmsModules/people-comm.css"
   }]
 },{
   "name":"头图",
   "inner_mods":[{
     "id": "bannerNew",
     "name": "有料头图－带倒计时",
-    "url": "guide2/js/modules/banner-new.html",
+    "url": "javascripts/cmsModules/banner-new.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "js": ["guide2/js/modules/youliao-time.js"],
-    "css": "guide2/js/modules/banner-new.css"
+    "js": ["javascripts/cmsModules/youliao-time.js"],
+    "css": "javascripts/cmsModules/banner-new.css"
   },{
     "id": "shopRankBanner",
     "name": "口碑榜头图",
-    "url": "guide2/js/modules/shoprank-topban.html",
+    "url": "javascripts/cmsModules/shoprank-topban.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/shoprank-topban.css"
+    "css": "javascripts/cmsModules/shoprank-topban.css"
   },{
     "id": "weekEndHead",
     "name": "幸福周末头图",
-    "url": "guide2/js/modules/weekend-head.html",
+    "url": "javascripts/cmsModules/weekend-head.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/weekend-head.css"
+    "css": "javascripts/cmsModules/weekend-head.css"
   },{
     "id": "storyBanner",
     "name": "达人说头图",
-    "url": "guide2/js/modules/banner.html",
+    "url": "javascripts/cmsModules/banner.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/banner.css"
+    "css": "javascripts/cmsModules/banner.css"
   },{
     "id": "youliaoHotsaleGroup",
     "name": "爆款团头图",
-    "url": "guide2/js/modules/youliao-hotsale-group.html",
+    "url": "javascripts/cmsModules/youliao-hotsale-group.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": false
     },
-    "css": "guide2/js/modules/youliao-hotsale-group.css"
+    "css": "javascripts/cmsModules/youliao-hotsale-group.css"
   },{
     "id": "topicsBanner",
     "name": "专题头图",
-    "url": "guide2/js/modules/topics-banner.html",
+    "url": "javascripts/cmsModules/topics-banner.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": false
     },
-    "css": "guide2/js/modules/topics-banner.css"
+    "css": "javascripts/cmsModules/topics-banner.css"
   }]
 },{
   "name":"分隔符",
   "inner_mods":[{
     "id": "hrArr",
     "name": "分割线三角",
-    "url": "guide2/js/modules/hr-arr.html",
+    "url": "javascripts/cmsModules/hr-arr.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/hr-arr.css"
+    "css": "javascripts/cmsModules/hr-arr.css"
   },{
     "id": "hrPoint",
     "name": "点分割线",
-    "url": "guide2/js/modules/hr-point.html",
+    "url": "javascripts/cmsModules/hr-point.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/hr-point.css"
+    "css": "javascripts/cmsModules/hr-point.css"
   },{
     "id": "hrPointBig",
     "name": "点分割线Big",
-    "url": "guide2/js/modules/hr-point-big.html",
+    "url": "javascripts/cmsModules/hr-point-big.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/hr-point-big.css"
+    "css": "javascripts/cmsModules/hr-point-big.css"
   }]
 },{
   "name":"营销",
   "inner_mods":[{
     "id":"cmsYouliaoShareAward",
     "name":"有料分享有奖",
-    "url":"guide2/js/modules/cms-youliao-share-award.html",
+    "url":"javascripts/cmsModules/cms-youliao-share-award.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/cms-youliao-share-award.css",
-    "js":["guide2/js/modules/cms-youliao-share-award.js"]
+    "css": "javascripts/cmsModules/cms-youliao-share-award.css",
+    "js":["javascripts/cmsModules/cms-youliao-share-award.js"]
   },{
     "id": "weekEndCouponMult",
     "name": "幸福周末优惠券",
     "version": 1,
-    "url": "guide2/js/modules/weekend-coupon1.html",
+    "url": "javascripts/cmsModules/weekend-coupon1.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/weekend-coupon-mult.css"
+    "css": "javascripts/cmsModules/weekend-coupon-mult.css"
   },{
     "id": "weekEndCouponSingle",
     "name": "幸福周末优惠券2",
-    "url": "guide2/js/modules/weekend-coupon2.html",
+    "url": "javascripts/cmsModules/weekend-coupon2.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/weekend-coupon-single.css"
+    "css": "javascripts/cmsModules/weekend-coupon-single.css"
   },{
     "id": "weChartShare",
     "name": "微信分享",
-    "url": "guide2/js/modules/wechart-share.html",
+    "url": "javascripts/cmsModules/wechart-share.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": false
     },
-    "js": ["guide2/js/modules/wechart-share.js"],
-    "css": "guide2/js/modules/wechart-share.css"
+    "js": ["javascripts/cmsModules/wechart-share.js"],
+    "css": "javascripts/cmsModules/wechart-share.css"
   },{
     "id": "youliaoRecieveCoupon",
     "name": "领取优惠券",
-    "url": "guide2/js/modules/youliao-recieve-coupon.html",
+    "url": "javascripts/cmsModules/youliao-recieve-coupon.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-recieve-coupon.css"
+    "css": "javascripts/cmsModules/youliao-recieve-coupon.css"
   },{
     "id": "youliaoVipRecruit",
     "name": "申请会员模块",
-    "url": "guide2/js/modules/youliao-vip-recruit.html",
+    "url": "javascripts/cmsModules/youliao-vip-recruit.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "js": ["guide2/js/modules/youliao-vip-recruit.js"],
-    "css": "guide2/js/modules/youliao-vip-recruit.css"
+    "js": ["javascripts/cmsModules/youliao-vip-recruit.js"],
+    "css": "javascripts/cmsModules/youliao-vip-recruit.css"
   }]
 },{
   "name":"引流",
   "inner_mods":[{
     "id": "grassMoreForShop",
     "name": "商品引流更多",
-    "url": "guide2/js/modules/grass-morefix-forshop.html",
+    "url": "javascripts/cmsModules/grass-morefix-forshop.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "js": ["guide2/js/modules/grass-morefix-forshop.js"],
-    "css": "guide2/js/modules/grass-morefix-forshop.css"
+    "js": ["javascripts/cmsModules/grass-morefix-forshop.js"],
+    "css": "javascripts/cmsModules/grass-morefix-forshop.css"
   },{
       "id": "goodsAbout",
       "name": "相关商品",
-      "url": "guide2/js/modules/goods-about.html",
+      "url": "javascripts/cmsModules/goods-about.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "js": ["guide2/js/modules/goods-about.js"],
-      "css": "guide2/js/modules/goods-about.css"
+      "js": ["javascripts/cmsModules/goods-about.js"],
+      "css": "javascripts/cmsModules/goods-about.css"
   },{
       "id": "vipRecruitBottom",
       "name": "点击加入会员(底部)",
-      "url": "guide2/js/modules/vip-recruit-bottom.html",
+      "url": "javascripts/cmsModules/vip-recruit-bottom.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "js": ["guide2/js/modules/vip-recruit-bottom.js"],
-      "css": "guide2/js/modules/vip-recruit-bottom.css"
+      "js": ["javascripts/cmsModules/vip-recruit-bottom.js"],
+      "css": "javascripts/cmsModules/vip-recruit-bottom.css"
   },{
     "id": "centerButton",
     "name": "居中按钮",
-    "url": "guide2/js/modules/center-button.html",
+    "url": "javascripts/cmsModules/center-button.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": ["guide2/js/modules/center-button.css"]
+    "css": ["javascripts/cmsModules/center-button.css"]
   },{
     "id": "sdkShare",
     "name": "基础－应用内分享(JS)",
-    "url": "guide2/js/modules/app-sdk-share.html",
+    "url": "javascripts/cmsModules/app-sdk-share.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "js": ["guide2/js/modules/app-sdk-share.js"]
+    "js": ["javascripts/cmsModules/app-sdk-share.js"]
   },{
     "id": "appDownloadNew",
     "name": "基础－下载应用(新)",
-    "url": "guide2/js/modules/app-download-new.html",
+    "url": "javascripts/cmsModules/app-download-new.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": false
     },
-    "js": ["guide2/js/modules/app-download-new.js"],
-    "css": "guide2/js/modules/app-download-new.css"
+    "js": ["javascripts/cmsModules/app-download-new.js"],
+    "css": "javascripts/cmsModules/app-download-new.css"
   }]
 },{
   "name":"操作",
   "inner_mods":[{
     "id": "appSetNavCar",
     "name": "Nav购物车",
-    "url": "guide2/js/modules/app-sdk-setnavcar.html",
+    "url": "javascripts/cmsModules/app-sdk-setnavcar.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": false
     },
-    "js": ["guide2/js/modules/app-sdk-setnavcar.js"]
+    "js": ["javascripts/cmsModules/app-sdk-setnavcar.js"]
   },{
     "id":"cmsYouliaoJoinCart",
     "name":"一起加入购物车",
-    "url":"guide2/js/modules/cms-youliao-join-cart.html",
+    "url":"javascripts/cmsModules/cms-youliao-join-cart.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/cms-youliao-join-cart.css",
-    "js":["guide2/js/modules/cms-youliao-join-cart.js"]
+    "css": "javascripts/cmsModules/cms-youliao-join-cart.css",
+    "js":["javascripts/cmsModules/cms-youliao-join-cart.js"]
   }]
 },{
   "name":"倒计时",
   "inner_mods":[{
     "id":"countDownCenterUseful",
     "name":"倒计时－带图居中",
-    "url":"guide2/js/modules/count-down-center-useful.html",
+    "url":"javascripts/cmsModules/count-down-center-useful.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/count-down-center-useful.css",
-    "js":["guide2/js/modules/count-down.js","guide2/js/modules/count-down-center.js"]
+    "css": "javascripts/cmsModules/count-down-center-useful.css",
+    "js":["javascripts/cmsModules/count-down.js","javascripts/cmsModules/count-down-center.js"]
   },{
     "id":"countDownOnelineUseful",
     "name":"倒计时－带图",
-    "url":"guide2/js/modules/count-down-oneline-useful.html",
+    "url":"javascripts/cmsModules/count-down-oneline-useful.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/count-down-oneline-useful.css",
-    "js":["guide2/js/modules/count-down.js"]
+    "css": "javascripts/cmsModules/count-down-oneline-useful.css",
+    "js":["javascripts/cmsModules/count-down.js"]
   },{
     "id":"countDownHotsale",
     "name":"倒计时－for爆款团",
-    "url":"guide2/js/modules/count-down-hotsale.html",
+    "url":"javascripts/cmsModules/count-down-hotsale.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/count-down-hotsale.css",
-    "js":["guide2/js/modules/count-down.js","guide2/js/modules/count-down-center.js"]
+    "css": "javascripts/cmsModules/count-down-hotsale.css",
+    "js":["javascripts/cmsModules/count-down.js","javascripts/cmsModules/count-down-center.js"]
   }]
 },{
   "name":"社区",
   "inner_mods":[{
     "id": "pgcHeader",
     "name": "PGC长图文头部",
-    "url": "guide2/js/modules/pgc-header.html",
+    "url": "javascripts/cmsModules/pgc-header.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/pgc-header.css"
+    "css": "javascripts/cmsModules/pgc-header.css"
   },{
     "id": "pgcContent",
     "name": "PGC长图文内容",
-    "url": "guide2/js/modules/pgc-content.html",
+    "url": "javascripts/cmsModules/pgc-content.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/pgc-content.css"
+    "css": "javascripts/cmsModules/pgc-content.css"
   },{
     "id": "topicBanner",
     "name": "话题精选－头图模块",
-    "url": "guide2/js/modules/topchoice-banner.html",
+    "url": "javascripts/cmsModules/topchoice-banner.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/topchoice-banner.css"
+    "css": "javascripts/cmsModules/topchoice-banner.css"
   },{
     "id": "topicItem",
     "name": "话题精选－项目",
-    "url": "guide2/js/modules/topchoice-item.html",
+    "url": "javascripts/cmsModules/topchoice-item.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/topchoice-item.css"
+    "css": "javascripts/cmsModules/topchoice-item.css"
   },{
     "id": "createBlog",
     "name": "基础－创建blog",
-    "url": "guide2/js/modules/app-blog-create.html",
+    "url": "javascripts/cmsModules/app-blog-create.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "js": ["guide2/js/modules/app-blog-create.js"],
-    "css": "guide2/js/modules/app-blog-create.css"
+    "js": ["javascripts/cmsModules/app-blog-create.js"],
+    "css": "javascripts/cmsModules/app-blog-create.css"
   },{
     "id": "graduateCard",
     "name": "研究所报告－大模块",
-    "url": "guide2/js/modules/graduatereport-card.html",
+    "url": "javascripts/cmsModules/graduatereport-card.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/graduatereport-card.css"
+    "css": "javascripts/cmsModules/graduatereport-card.css"
   },{
     "id": "graduateReport",
     "name": "研究所报告－小模块",
     "version": 1,
-    "url": "guide2/js/modules/graduatereport-report.html",
+    "url": "javascripts/cmsModules/graduatereport-report.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/graduatereport-report.css"
+    "css": "javascripts/cmsModules/graduatereport-report.css"
   },{
     "id":"columnList",
     "name":"专栏Mod",
-    "url":"guide2/js/modules/cms-column.html",
+    "url":"javascripts/cmsModules/cms-column.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/cms-column.css",
-    "js":["guide2/js/modules/cms-column.js"]
+    "css": "javascripts/cmsModules/cms-column.css",
+    "js":["javascripts/cmsModules/cms-column.js"]
   }]
 },{
   "name":"周榜月榜达人榜",
   "inner_mods":[{
     "id":"articleWeeklistBanner",
     "name":"周榜－头部",
-    "url":"guide2/js/modules/article-weeklist-banner.html",
+    "url":"javascripts/cmsModules/article-weeklist-banner.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weeklist-banner.css",
-    "js":["guide2/js/modules/article-link-inapp.js"]
+    "css": "javascripts/cmsModules/article-weeklist-banner.css",
+    "js":["javascripts/cmsModules/article-link-inapp.js"]
   },{
     "id":"articleWeeklistSeparat",
     "name":"周榜－分隔",
-    "url":"guide2/js/modules/article-weeklist-separat.html",
+    "url":"javascripts/cmsModules/article-weeklist-separat.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weeklist-separat.css",
+    "css": "javascripts/cmsModules/article-weeklist-separat.css",
     "js":[""]
   },{
     "id":"articleWeeklistSeparatTwo",
     "name":"周榜－分隔2",
-    "url":"guide2/js/modules/article-weeklist-separat-two.html",
+    "url":"javascripts/cmsModules/article-weeklist-separat-two.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weeklist-separat.css",
+    "css": "javascripts/cmsModules/article-weeklist-separat.css",
     "js":[""]
   },{
     "id":"articleWeeklistOne",
     "name":"周榜－前三",
-    "url":"guide2/js/modules/article-weeklist-one.html",
+    "url":"javascripts/cmsModules/article-weeklist-one.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weeklist-one.css",
-    "js":["guide2/js/modules/article-link-inapp.js"]
+    "css": "javascripts/cmsModules/article-weeklist-one.css",
+    "js":["javascripts/cmsModules/article-link-inapp.js"]
   },{
     "id":"articleWeeklistTwo",
     "name":"周榜－前三以后",
-    "url":"guide2/js/modules/article-weeklist-two.html",
+    "url":"javascripts/cmsModules/article-weeklist-two.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weeklist-two.css",
-    "js":["guide2/js/modules/article-link-inapp.js"]
+    "css": "javascripts/cmsModules/article-weeklist-two.css",
+    "js":["javascripts/cmsModules/article-link-inapp.js"]
   },{
     "id":"articleWeeklistMoreArticle",
     "name":"周榜－展开更多文章",
-    "url":"guide2/js/modules/article-weeklist-more-article.html",
+    "url":"javascripts/cmsModules/article-weeklist-more-article.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weeklist-more-article.css",
-    "js":["guide2/js/modules/article-weeklist-more-article.js"]
+    "css": "javascripts/cmsModules/article-weeklist-more-article.css",
+    "js":["javascripts/cmsModules/article-weeklist-more-article.js"]
   },{
     "id":"articleWeeklistSeePrev",
     "name":"周榜－查看往期",
-    "url":"guide2/js/modules/article-weeklist-see-prev.html",
+    "url":"javascripts/cmsModules/article-weeklist-see-prev.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weeklist-see-prev.css",
+    "css": "javascripts/cmsModules/article-weeklist-see-prev.css",
     "js":[""]
   },{
     "id":"articleWeeklistWebfoot",
     "name":"web端底部分享",
-    "url":"guide2/js/modules/article-weeklist-webfoot.html",
+    "url":"javascripts/cmsModules/article-weeklist-webfoot.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weeklist-webfoot.css",
-    "js":["guide2/js/modules/article-weeklist-webfoot.js"]
+    "css": "javascripts/cmsModules/article-weeklist-webfoot.css",
+    "js":["javascripts/cmsModules/article-weeklist-webfoot.js"]
   },{
     "id":"articleWeekprevNav",
     "name":"周榜－往期－导航",
-    "url":"guide2/js/modules/article-weekprev-nav.html",
+    "url":"javascripts/cmsModules/article-weekprev-nav.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weekprev-nav.css",
-    "js":["guide2/js/modules/article-weekprev-nav.js"]
+    "css": "javascripts/cmsModules/article-weekprev-nav.css",
+    "js":["javascripts/cmsModules/article-weekprev-nav.js"]
   },{
     "id":"navtabContainer",
     "name":"导航切换－容器",
-    "url":"guide2/js/modules/navtab-container.html",
+    "url":"javascripts/cmsModules/navtab-container.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/navtab-container.css",
+    "css": "javascripts/cmsModules/navtab-container.css",
     "js":[""]
   },{
     "id":"articleWeekprevSeparat",
     "name":"周榜往期/月榜－分隔",
-    "url":"guide2/js/modules/article-weekprev-separat.html",
+    "url":"javascripts/cmsModules/article-weekprev-separat.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weekprev-separat.css",
+    "css": "javascripts/cmsModules/article-weekprev-separat.css",
     "js":[""]
   },{
     "id":"articleWeekprevBlank",
     "name":"周榜－往期－空状态",
     "version":1,
-    "url":"guide2/js/modules/article-weekprev-blank.html",
+    "url":"javascripts/cmsModules/article-weekprev-blank.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-weekprev-blank.css",
-    "js":["guide2/js/modules/article-link-inapp.js"]
+    "css": "javascripts/cmsModules/article-weekprev-blank.css",
+    "js":["javascripts/cmsModules/article-link-inapp.js"]
   },{
     "id":"articleMonthcateSeparat",
     "name":"月榜分类－分隔",
-    "url":"guide2/js/modules/article-monthcate-separat.html",
+    "url":"javascripts/cmsModules/article-monthcate-separat.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-monthcate-separat.css",
+    "css": "javascripts/cmsModules/article-monthcate-separat.css",
     "js":[""]
   },{
     "id":"articleMonthcateNav",
     "name":"月榜分类－导航",
-    "url":"guide2/js/modules/article-monthcate-nav.html",
+    "url":"javascripts/cmsModules/article-monthcate-nav.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/article-monthcate-nav.css",
-    "js":["guide2/js/modules/article-monthcate-nav.js"]
+    "css": "javascripts/cmsModules/article-monthcate-nav.css",
+    "js":["javascripts/cmsModules/article-monthcate-nav.js"]
   },{
     "id":"talentListNav",
     "name":"优质达人－导航",
-    "url":"guide2/js/modules/talent-list-nav.html",
+    "url":"javascripts/cmsModules/talent-list-nav.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/talent-list-nav.css",
-    "js":["guide2/js/modules/talent-list-nav.js"]
+    "css": "javascripts/cmsModules/talent-list-nav.css",
+    "js":["javascripts/cmsModules/talent-list-nav.js"]
   },{
     "id":"talentList",
     "name":"优质达人list",
-    "url":"guide2/js/modules/talent-list.html",
+    "url":"javascripts/cmsModules/talent-list.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/talent-list.css",
-    "js":["guide2/js/modules/article-link-inapp.js"]
+    "css": "javascripts/cmsModules/talent-list.css",
+    "js":["javascripts/cmsModules/article-link-inapp.js"]
   }]
 },{
   "name":"征文大赛",
   "inner_mods":[{
     "id":"essaycontBanner",
     "name":"头部banner",
-    "url":"guide2/js/modules/essaycont-banner.html",
+    "url":"javascripts/cmsModules/essaycont-banner.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-banner.css",
+    "css": "javascripts/cmsModules/essaycont-banner.css",
     "js":[""]
   },{
     "id":"essaycontCollectTheme",
     "name":"征文主题",
-    "url":"guide2/js/modules/essaycont-collect-theme.html",
+    "url":"javascripts/cmsModules/essaycont-collect-theme.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-collect-theme.css",
+    "css": "javascripts/cmsModules/essaycont-collect-theme.css",
     "js":[""]
   },{
     "id":"essaycontCollectDeadline",
     "name":"截止时间",
-    "url":"guide2/js/modules/essaycont-collect-deadline.html",
+    "url":"javascripts/cmsModules/essaycont-collect-deadline.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-collect-deadline.css",
+    "css": "javascripts/cmsModules/essaycont-collect-deadline.css",
     "js":[""]
   },{
     "id":"essaycontCollectPrize",
     "name":"奖品",
-    "url":"guide2/js/modules/essaycont-collect-prize.html",
+    "url":"javascripts/cmsModules/essaycont-collect-prize.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-collect-prize.css",
+    "css": "javascripts/cmsModules/essaycont-collect-prize.css",
     "js":[""]
   },{
     "id":"essaycontCollectClaim",
     "name":"参赛要求",
-    "url":"guide2/js/modules/essaycont-collect-claim.html",
+    "url":"javascripts/cmsModules/essaycont-collect-claim.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-collect-claim.css",
+    "css": "javascripts/cmsModules/essaycont-collect-claim.css",
     "js":[""]
   },{
     "id":"essaycontCollectWay",
     "name":"参赛方式",
-    "url":"guide2/js/modules/essaycont-collect-way.html",
+    "url":"javascripts/cmsModules/essaycont-collect-way.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-collect-way.css",
+    "css": "javascripts/cmsModules/essaycont-collect-way.css",
     "js":[""]
   },{
     "id":"essaycontCollectGoodessay",
     "name":"优秀作品",
-    "url":"guide2/js/modules/essaycont-collect-goodessay.html",
+    "url":"javascripts/cmsModules/essaycont-collect-goodessay.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-collect-goodessay.css",
-    "js":["guide2/js/modules/article-link-inapp.js","guide2/js/modules/essaycont-collect-goodessay.js"]
+    "css": "javascripts/cmsModules/essaycont-collect-goodessay.css",
+    "js":["javascripts/cmsModules/article-link-inapp.js","javascripts/cmsModules/essaycont-collect-goodessay.js"]
   },{
     "id":"essaycontCollectJoin",
     "name":"加入",
-    "url":"guide2/js/modules/essaycont-collect-join.html",
+    "url":"javascripts/cmsModules/essaycont-collect-join.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-collect-join.css",
+    "css": "javascripts/cmsModules/essaycont-collect-join.css",
     "js":[""]
   },{
     "id":"disclaimer",
     "name":"手机底部免责申明",
-    "url":"guide2/js/modules/disclaimer.html",
+    "url":"javascripts/cmsModules/disclaimer.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/disclaimer.css",
+    "css": "javascripts/cmsModules/disclaimer.css",
     "js":[""]
   },{
     "id":"essaycontGoodTitle",
     "name":"优秀作品title",
-    "url":"guide2/js/modules/essaycont-good-title.html",
+    "url":"javascripts/cmsModules/essaycont-good-title.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-good-title.css",
+    "css": "javascripts/cmsModules/essaycont-good-title.css",
     "js":[""]
   },{
     "id":"essaycontGoodList",
     "name":"优秀作品list",
-    "url":"guide2/js/modules/essaycont-good-list.html",
+    "url":"javascripts/cmsModules/essaycont-good-list.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-good-list.css",
-    "js":["guide2/js/modules/article-link-inapp.js","guide2/js/modules/essaycont-good-list.js"]
+    "css": "javascripts/cmsModules/essaycont-good-list.css",
+    "js":["javascripts/cmsModules/article-link-inapp.js","javascripts/cmsModules/essaycont-good-list.js"]
   },{
     "id":"essaycontPublicTitle",
     "name":"公布期头部介绍",
-    "url":"guide2/js/modules/essaycont-public-title.html",
+    "url":"javascripts/cmsModules/essaycont-public-title.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-public-title.css",
+    "css": "javascripts/cmsModules/essaycont-public-title.css",
     "js":[""]
   },{
     "id":"essaycontPublicNotice",
     "name":"公布期头部通知",
-    "url":"guide2/js/modules/essaycont-public-notice.html",
+    "url":"javascripts/cmsModules/essaycont-public-notice.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-public-notice.css",
+    "css": "javascripts/cmsModules/essaycont-public-notice.css",
     "js":[""]
   },{
     "id":"essaycontPublicList",
     "name":"公布期获奖列表",
-    "url":"guide2/js/modules/essaycont-public-list.html",
+    "url":"javascripts/cmsModules/essaycont-public-list.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-public-list.css",
-    "js":["guide2/js/modules/article-link-inapp.js"]
+    "css": "javascripts/cmsModules/essaycont-public-list.css",
+    "js":["javascripts/cmsModules/article-link-inapp.js"]
   },{
     "id":"essaycontPublicSeemore",
     "name":"公布期查看更多",
-    "url":"guide2/js/modules/essaycont-public-seemore.html",
+    "url":"javascripts/cmsModules/essaycont-public-seemore.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/essaycont-public-seemore.css",
+    "css": "javascripts/cmsModules/essaycont-public-seemore.css",
     "js":[""]
   }]
 },{
@@ -1254,163 +1254,163 @@
   "inner_mods":[{
     "id":"columnBanner",
     "name":"专栏头部",
-    "url":"guide2/js/modules/column-banner.html",
+    "url":"javascripts/cmsModules/column-banner.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/column-banner.css",
-    "js":["guide2/js/modules/column-banner.js"]
+    "css": "javascripts/cmsModules/column-banner.css",
+    "js":["javascripts/cmsModules/column-banner.js"]
   },{
     "id":"columnContent",
     "name":"专栏内容",
-    "url":"guide2/js/modules/column-content.html",
+    "url":"javascripts/cmsModules/column-content.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/column-content.css",
-    "js":["guide2/js/modules/column-content.js"]
+    "css": "javascripts/cmsModules/column-content.css",
+    "js":["javascripts/cmsModules/column-content.js"]
   }]
 },{
   "name":"不再使用",
   "inner_mods":[{
     "id": "appDownload",
     "name": "基础－下载应用(JS)",
-    "url": "guide2/js/modules/app-download.html",
+    "url": "javascripts/cmsModules/app-download.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": false
     },
-    "js": ["guide2/js/modules/app-download.js"],
-    "css": "guide2/js/modules/app-download.css"
+    "js": ["javascripts/cmsModules/app-download.js"],
+    "css": "javascripts/cmsModules/app-download.css"
   },{
     "id": "grassMore",
     "name": "商品卡片－更多推荐",
-    "url": "guide2/js/modules/grass-morefix.html",
+    "url": "javascripts/cmsModules/grass-morefix.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/grass-morefix.css"
+    "css": "javascripts/cmsModules/grass-morefix.css"
   },{
     "id": "tuangouCard",
     "name": "基础－团购卡片",
-    "url": "guide2/js/modules/tuangou-card.html",
+    "url": "javascripts/cmsModules/tuangou-card.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/tuangou-card.css"
+    "css": "javascripts/cmsModules/tuangou-card.css"
   },{
     "id": "voteBanner",
     "name": "投票－头图模块",
-    "url": "guide2/js/modules/votelist-banner.html",
+    "url": "javascripts/cmsModules/votelist-banner.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/votelist-banner.css"
+    "css": "javascripts/cmsModules/votelist-banner.css"
   },{
     "id": "voteList",
     "name": "投票－瀑布流",
-    "url": "guide2/js/modules/votelist-list.html",
+    "url": "javascripts/cmsModules/votelist-list.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "js": ["guide2/js/modules/votelist-list.js"],
-    "css": "guide2/js/modules/votelist-list.css"
+    "js": ["javascripts/cmsModules/votelist-list.js"],
+    "css": "javascripts/cmsModules/votelist-list.css"
   },{
     "id": "youliaoBuyIDs",
     "name": "基础－购买商品自动获取",
-    "url": "guide2/js/modules/youliao-product-ids.html",
+    "url": "javascripts/cmsModules/youliao-product-ids.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-product-handlebar.css",
-    "js": ["guide2/js/modules/youliao-product-ids.js"]
+    "css": "javascripts/cmsModules/youliao-product-handlebar.css",
+    "js": ["javascripts/cmsModules/youliao-product-ids.js"]
   },{
     "id": "youliaoIntro",
     "name": "基础－有料banner",
-    "url": "guide2/js/modules/youliao-intro.html",
+    "url": "javascripts/cmsModules/youliao-intro.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "js": ["guide2/js/modules/youliao-time.js"],
-    "css": "guide2/js/modules/youliao-intro.css"
+    "js": ["javascripts/cmsModules/youliao-time.js"],
+    "css": "javascripts/cmsModules/youliao-intro.css"
   },{
     "id": "youliaoIntroImage",
     "name": "基础－介绍购买大图",
-    "url": "guide2/js/modules/youliao-intro-img.html",
+    "url": "javascripts/cmsModules/youliao-intro-img.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-intro-img.css"
+    "css": "javascripts/cmsModules/youliao-intro-img.css"
   },{
     "id": "youliaoInventoryGroup",
     "name": "有料商品组合",
-    "url": "guide2/js/modules/youliao-inventory-group.html",
+    "url": "javascripts/cmsModules/youliao-inventory-group.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-inventory-group.css"
+    "css": "javascripts/cmsModules/youliao-inventory-group.css"
   },{
     "id": "youliaoProductBanner",
     "name": "基础－有料专场Banner",
-    "url": "guide2/js/modules/youliao-product-banner.html",
+    "url": "javascripts/cmsModules/youliao-product-banner.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "js": ["guide2/js/modules/youliao-time.js"],
-    "css": "guide2/js/modules/youliao-product-banner.css"
+    "js": ["javascripts/cmsModules/youliao-time.js"],
+    "css": "javascripts/cmsModules/youliao-product-banner.css"
   },{
     "id": "youliaoProductCard1",
     "name": "基础－商品卡片1",
-    "url": "guide2/js/modules/youliao-product-card1.html",
+    "url": "javascripts/cmsModules/youliao-product-card1.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-product-card1.css"
+    "css": "javascripts/cmsModules/youliao-product-card1.css"
   },{
     "id": "youliaoTips",
     "name": "基础－商品团",
-    "url": "guide2/js/modules/youliao-product-tips.html",
+    "url": "javascripts/cmsModules/youliao-product-tips.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-product-tips.css"
+    "css": "javascripts/cmsModules/youliao-product-tips.css"
   },{
     "id": "youliaoBuy",
     "name": "基础－购买物品",
-    "url": "guide2/js/modules/youliao-buy.html",
+    "url": "javascripts/cmsModules/youliao-buy.html",
     "opt": {
       "add": true,
       "copy": true,
       "integral": true
     },
-    "css": "guide2/js/modules/youliao-buy.css"
+    "css": "javascripts/cmsModules/youliao-buy.css"
   }]
 },
 {
@@ -1418,25 +1418,25 @@
   "inner_mods":[{
       "id": "1024ScrollList",
       "name": "1024说明页榜单",
-      "url": "guide2/js/modules/1024-scroll-list.html",
+      "url": "javascripts/cmsModules/1024-scroll-list.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": false
       },
-      "js": ["guide2/js/modules/1024-scroll-list.js"],
-      "css": "guide2/js/modules/1024-scroll-list.css"
+      "js": ["javascripts/cmsModules/1024-scroll-list.js"],
+      "css": "javascripts/cmsModules/1024-scroll-list.css"
   },{
       "id": "1111TimeLimitSale",
       "name": "1111囤货超值购",
       "version": 1,
-      "url": "guide2/js/modules/1111-time-limit-sale.html",
+      "url": "javascripts/cmsModules/1111-time-limit-sale.html",
       "opt": {
         "add": true,
         "copy": true,
         "integral": true
       },
-      "js": ["guide2/js/modules/1111-time-limit-sale.js"],
-      "css": "guide2/js/modules/1111-time-limit-sale.css"
+      "js": ["javascripts/cmsModules/1111-time-limit-sale.js"],
+      "css": "javascripts/cmsModules/1111-time-limit-sale.css"
   }]
 }]

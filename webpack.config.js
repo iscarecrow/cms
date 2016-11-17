@@ -19,5 +19,12 @@ module.exports = {
     loader: 'babel',
     query: {"presets": ["es2015", "stage-0"]}
     },{ test: /\.css$/, loader: "style!css" }]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    })
+  ]
 };

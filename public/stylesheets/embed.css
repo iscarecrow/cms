@@ -1,0 +1,109 @@
+/* cms embed */
+
+.cms-module{
+  display: block !important;
+  position: relative;
+}
+
+.cms-jsmodule-occupy{
+  padding: 24px 0 24px;
+  line-height: 37px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  background-color: #000;
+}
+.cms-module-div{
+  position: absolute;
+  top:0;
+  left:0;
+  width: auto;
+  z-index: 999999;
+}
+/* 子模块 即父亲节点有 cms-module classname */
+.cms-module .cms-module .cms-module-div{
+  top:20px;
+}
+.cms-icon{
+  float: left;
+  margin-right: 5px;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  line-height: 20px;
+  font-size:12px;
+  font-weight:bold;
+  font-style:normal;
+  text-decoration: none;
+  text-align: center;
+  background: green;
+  border-radius: 50%;
+  z-index: 9999;
+  cursor:pointer;
+  -webkit-transition: -webkit-transform .15s linear;
+}
+.cms-icon:last-child{
+  margin-right: 0;
+}
+.cms-icon:hover{
+  top:2px;
+}
+.cms-icon-trans{
+  -webkit-animation-name:overroll;
+  animation-name:overroll;
+
+  -webkit-animation-duration:2s;
+  animation-duration:2s;
+
+  -webkit-animation-timing-function:ease;
+  animation-timing-function:ease;
+
+  -webkit-animation-iteration-count:1;
+  animation-iteration-count:1;
+
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+@-webkit-keyframes overroll{
+  0%     {-webkit-transform:scale(1);}
+  10%     {-webkit-transform:scale(1.25);}
+  100%   {-webkit-transform:scale(1);}
+}
+.cms-embed {min-height: 22px;}
+.cms-tools {display: none;}
+.cms-show-tool {
+  left: 0;
+}
+.cms-add{
+  left:24px;
+}
+.cms-copy{
+  left:48px;
+}
+.cms-delete{
+  right: 0;
+}
+.cms-integral{
+  left:72px;
+}
+
+.cms-animating .cms-module-div{
+  display: none !important;
+}
+
+a:hover,
+img:hover{
+  box-shadow: 0px 0px 3px green, 0px 0px 3px green inset;
+}
+.cms-editable-hover{
+  box-shadow:0px 0px 3px green,0px 0px 3px green inset;
+}
+
+/* .cms-attribute- 开头的样式名，为最终存留在输出源代码的 className
+用以保存cms编辑状态 */
+.cms-attribute-hidden{
+  background-color: red;
+  opacity: .5 !important;
+  filter: alpha(opacity=50) !important;
+  box-shadow: 0px 0px 3px red;
+}

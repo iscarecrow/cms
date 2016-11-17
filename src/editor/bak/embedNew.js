@@ -2,6 +2,7 @@
 区分 cmsupload 和 cmsedit 之后，
 可视化编辑功能只在 cmsedit 页面拥有
 */
+
 (function($) {
   window.embedJs = (function() {
     return {

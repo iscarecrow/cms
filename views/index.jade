@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  //- h1= title
-  //- p Welcome to #{title}
+  div.content.clr
+    div.cms_cnt_l.l
+      ul
+        li.menu-modues=1
+        li.menu-modues=2
+        li.menu-modues=3
+        li.menu-modues=4
+    div.cms_cnt_r.l
+      div.cms_publish
+        
+      div.embed-init
+        iframe(src="about:blank" width='100%' height='4000' frameborder=0 scrolling='no' id="embed-iframe" name="embedIframe")

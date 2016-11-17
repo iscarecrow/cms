@@ -1,25 +1,3 @@
-import $ from 'jquery';
-import jQuery from 'jquery';
-import embedJs from './editor/embedJs';
-import a from './editor/jquery-ui.min';
-import MediumEditor from './editor/medium-editor/medium-editor';
-import DtPlatform from './utils/dtPlatform';
-
-// 前台展示
-import setNavigationShoppingCar from './part/setNavigationShoppingCar';
-import setNavigationShare from './part/setNavigationShare';
-import expireTime from './part/expireTime';
-
-window.embedJs = embedJs;
-window.$ = $;
-window.DtPlatform = DtPlatform;
-
-window.DtPart = {
-  setNavigationShoppingCar: setNavigationShoppingCar,
-  setNavigationShare: setNavigationShare,
-  expireTime: expireTime
-};
-
 $(function(){
 
   var $D = $(document);
@@ -27,8 +5,8 @@ $(function(){
   $('.cms-module').parent().sortable({ handle: ".cms-show-tool" });
 
   $('.cms-show-tool').disableSelection();
-
   // 富文本编辑
+  
   var editor = new MediumEditor('.cms-module', {
     toolbar: {
       buttons: ['colorPicker', 'fontsize', 'bold', 'italic', 'underline', 'strikethrough', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'removeFormat']
@@ -47,7 +25,6 @@ $(function(){
       "integral": true
     });
   });
-
   //显示隐藏模块
   $('.cms-attribute-hidden').each(function(index, el) {
     var _style = $(el).attr('style');
@@ -233,7 +210,7 @@ $(function(){
 
     $origin.fadeOut(function() {
       $origin.remove();
-      // embedJs.cmsSetSelfHeight();
+      embedJs.cmsSetSelfHeight();
       var _name = $origin.data('name');
       //是否是重复模块
       if ($D.find('[data-name="' + _name + '"]').length === 0) {
@@ -507,7 +484,7 @@ $(function(){
         "height": opheight
       }, function() {
         $copy.removeClass('cms-animating').unwrap();
-        // embedJs.cmsSetSelfHeight();
+        embedJs.cmsSetSelfHeight();
       });
     // 拖拽功能 module 注入可操作panel，此行代码要先于 jsmodule
     $('.cms-module').parent().sortable({ handle: ".cms-show-tool" });
@@ -670,71 +647,4 @@ $(function(){
     return returnHtml;
   }
 
-
-  function initModule(extendName) {
-    var extendNameWithData = "data-" + extendName;
-    var $module = $('[' + extendNameWithData + ']');
-    var _cmsFocus = embedJs.cmsFocus;
-    $module.find('.cms-module-div .cms-integral').on('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      var $t = $(this).closest('.cms-module');
-      var config = $t.data(extendName);
-      if (typeof config == 'object') {
-        _cmsFocus.clear();
-        _cmsFocus.set(extendName, config);
-        _cmsFocus._root = $t;
-        _cmsFocus._customtype = extendName;
-        _cmsFocus._callback = function($el, type, val) {
-          if (val && typeof val == 'object') {
-            // 修改 data-[modulename] 值，然后重新加载子页面
-            var _oldConfig = $el.data(_cmsFocus._customtype);
-            for(var key in val){
-              if(_oldConfig[key].hasOwnProperty('value')){
-                _oldConfig[key].value = val[key];
-              }else{
-                _oldConfig[key] = val[key];
-              }
-            }
-            $el.attr('data-' + _cmsFocus._customtype, JSON.stringify(_oldConfig));
-            embedJs.cmsReloadModifiedPage();
-          }
-        }
-        popEditPanel(extendName);
-      }
-    });
-  }
-
-  function popEditPanel(extendName) {
-    var htmlstr = '',
-      _cmsFocus = embedJs.cmsFocus;
-    for (var name in _cmsFocus[extendName]) {
-      var itemval = _cmsFocus[extendName][name];
-      var showname = name;
-      if(jQuery.isPlainObject(itemval)){
-        var propertyStr = '';
-        for (var name in itemval) {
-          propertyStr += '" '+name+'="'+ itemval[name];
-        }
-        htmlstr += [
-          '<li><u>', showname, '</u><input type="text" name="', showname, propertyStr, '"/></li>'
-        ].join('');
-      }else{
-        htmlstr += [
-          '<li><u>', showname, '</u><input type="text" name="', name, '" value="', itemval, '"/></li>'
-        ].join('');
-      }
-
-    }
-
-    var $lis = $(htmlstr);
-
-    // 调用父亲窗口的 popout 弹框方法
-    embedJs.cmsPopEditPanel($lis, extendName);
-  }
-
-
 });
-
-console.log(embedJs);

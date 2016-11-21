@@ -1,6 +1,7 @@
 import cmsTools from '../utils/cmsTools';
 import addNewNode from './addNewNode';
 import initModule from './initModule';
+console.log(cmsTools);
 
 let embedJs = {
   /**
@@ -36,21 +37,14 @@ let embedJs = {
       var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
       var maxPos = $chars.length;
       var pwd = '';
-      for (i = 0; i < len; i++) {
+      for (let i = 0; i < len; i++) {
         pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
       }
       return head + '-' + new Date().getTime() + '-' + pwd;
     }
   },
-  /**
-   * [setSelfHeightAuto description]
-   * @description  设置iframe的高度
-   * @author  johnnyjiang
-   * @email                                 johnnyjiang813@gmail.com
-   * @createTime   2016-02-23T11:45:13+0800
-   */
   setSelfHeightAuto: function() {
-    // embedJs.cmsSetSelfHeight();
+    embedJs.cmsSetSelfHeight();
     window.setTimeout(embedJs.setSelfHeightAuto, 2000);
   },
   cmsSetSelfHeight: function() {
@@ -67,15 +61,6 @@ let embedJs = {
       parent.embedParent.reloadModifiedPage();
     }
   },
-  /**
-   * [cmsProperateImageWidth description]
-   * @param       {[type]} oldwidth                 [description]
-   * @return      {[type]}                          [description]
-   * @description   图片宽度转换
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-02-23T11:14:15+0800
-   */
   cmsProperateImageWidth: function(oldwidth) {
     var width = 900;
     for (var i = 1; i < 10; i++) {
@@ -92,14 +77,6 @@ let embedJs = {
       $('<div class="cms-embed cms-module-div" contenteditable="false"><i class="cms-icon cms-show-tool">T</i><div class="cms-tools l">' + (opt.add ? '<i class="cms-icon cms-add">+</i>' : '') + (opt.copy ? '<i class="cms-icon cms-copy">c</i>' : '') + (opt.integral ? '<i class="cms-icon cms-integral">i</i>' : '') + '<i class="cms-icon cms-delete">x</i>' + '</div></div>').prependTo($module);
     }
   },
-  /**
-   * [appendAfter description]
-   * @param       {[type]} node                     [模块节点]
-   * @description 指定位置添加
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-02-23T11:11:20+0800
-   */
   appendAfter: function(node) {
     var $newhtml = $(node);
     this.cmsBuildPanel($newhtml, {
@@ -110,17 +87,8 @@ let embedJs = {
     $newhtml && $.isFunction(this.cmsFocus._callback) && this.cmsFocus._callback($newhtml, '', '', 'down');
     this.cmsDomCache.clear();
   },
-  /**
-   * [cmsReturnBack description]
-   * @param       {[type]} arr                      [description]
-   * @param       {[type]} opt                      [description]
-   * @return      {[type]}                          [description]
-   * @description  添加模块后回调
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-02-23T11:16:28+0800
-   */
   cmsReturnBack: function(arr, opt) {
+
     $(arr).each(function(i, obj) {
       var elem = embedJs.cmsDomCache[obj.el];
       if (elem) {
@@ -184,7 +152,7 @@ let embedJs = {
             }
             elem.attr('href', nhref);
             break;
-            case "text":
+          case "text":
             var tx = $.trim(obj.val);
             elem.html(obj.val || '　');
             break;
@@ -194,7 +162,8 @@ let embedJs = {
             elem.attr('src', videoSrc);
             elem.attr('poster', posterImg);
             break;
-        }
+        };
+
         if (embedJs.cmsFocus._customtype && obj.type == embedJs.cmsFocus._customtype) {
           $.isFunction(embedJs.cmsFocus._callback) && embedJs.cmsFocus._callback(elem, embedJs.cmsFocus._customtype, obj.val);
         }
@@ -249,30 +218,11 @@ let embedJs = {
     }
     this.cmsDomCache.clear();
   },
-  /**
-   * [cmsPopAddPanel description]
-   * @return      {[type]} [description]
-   * @description 弹出添加框
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-02-23T11:20:46+0800
-   */
   cmsPopAddPanel: function() {
-    var $pop = $('<div class="cms-prompt"><div id="cms-addmodule-quickly" style="padding: 10px"><a id="cms-addmodule-new" direction="up" href="javascript:;">在当前模块前添加新模块</a><a id="cms-addmodule-new" direction="down" href="javascript:;">在当前模块后添加新模块</a><br><a id="cms-addmodule-current" href="javascript:;">复制添加当前模块</a>' + (localStorage && localStorage["cms-copy"] ? '<br><a class="cms-addmodule-storage" direction="up" href="javascript:;">添加拷贝模块↑ </a><a class="cms-addmodule-storage" direction="down" href="javascript:;">添加拷贝模块↓ </a>' : '') + '<br><a class="cms-addmodule-space" href="javascript:;" ht="24">添加空行(小)</a><a class="cms-addmodule-space" href="javascript:;" ht="40">添加空行(中)</a><a class="cms-addmodule-space" href="javascript:;" ht="60">添加空行(大)</a></div></div>');
-    console.log($pop);
+    var $pop = $('<div class="cms-prompt"><div id="cms-addmodule-quickly" style="padding: 10px"><a class="cms-addmodule-new" direction="up" href="javascript:;">在当前模块前添加新模块</a><a class="cms-addmodule-new" direction="down" href="javascript:;">在当前模块后添加新模块</a><br><a id="cms-addmodule-current" href="javascript:;">复制添加当前模块</a>' + (localStorage && localStorage["cms-copy"] ? '<br><a class="cms-addmodule-storage" direction="up" href="javascript:;">添加拷贝模块↑ </a><a class="cms-addmodule-storage" direction="down" href="javascript:;">添加拷贝模块↓ </a>' : '') + '<br><a class="cms-addmodule-space" href="javascript:;" ht="24">添加空行(小)</a><a class="cms-addmodule-space" href="javascript:;" ht="40">添加空行(中)</a><a class="cms-addmodule-space" href="javascript:;" ht="60">添加空行(大)</a></div></div>');
     // 调用父亲窗口的 popout 弹框方法
     parent && parent.embedParent.popOut && parent.embedParent.popOut(['添加', $pop]);
   },
-  /**
-   * [cmsPopEditPanel description]
-   * @param       {[type]} $cont                    [description]
-   * @param       {[type]} extendName               [description]
-   * @return      {[type]}                          [description]
-   * @description 弹出编辑框 调用父窗口
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-02-23T11:22:07+0800
-   */
   cmsPopEditPanel: function($cont, extendName) {
     // 如果 _root 是隐藏状态，则显示 checkbox 不勾选
     var hideroot = 'checked';
@@ -308,14 +258,6 @@ let embedJs = {
     // 调用父亲窗口的 popout 弹框方法
     parent && parent.embedParent.popOut && parent.embedParent.popOut(['编辑', $pop]);
   },
-  /**
-   * [cmsHtmlRepairBeforeGenerate description]
-   * @return      {[type]} [description]
-   * @description 生成页面之前处理
-   * @author  johnnyjiang
-   * @email                                         johnnyjiang813@gmail.com
-   * @createTime           2016-02-23T11:30:07+0800
-   */
   cmsHtmlRepairBeforeGenerate: function() {
     // 隐藏区块设置 cms-attribute-style
     $('.cms-attribute-hidden').attr('cms-attribute-style', 'display:none;');

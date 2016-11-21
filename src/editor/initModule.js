@@ -1,32 +1,6 @@
 import embedJs from './embedJs';
-
-function popEditPanel(extendName) {
-  var htmlstr = '',
-    _cmsFocus = embedJs.cmsFocus;
-  for (var name in _cmsFocus[extendName]) {
-    var itemval = _cmsFocus[extendName][name];
-    var showname = name;
-    if(jQuery.isPlainObject(itemval)){
-      var propertyStr = '';
-      for (var name in itemval) {
-        propertyStr += '" '+name+'="'+ itemval[name];
-      }
-      htmlstr += [
-        '<li><u>', showname, '</u><input type="text" name="', showname, propertyStr, '"/></li>'
-      ].join('');
-    }else{
-      htmlstr += [
-        '<li><u>', showname, '</u><input type="text" name="', name, '" value="', itemval, '"/></li>'
-      ].join('');
-    }
-
-  }
-
-  var $lis = $(htmlstr);
-
-  // 调用父亲窗口的 popout 弹框方法
-  embedJs.cmsPopEditPanel($lis, extendName);
-}
+import $ from 'jquery';
+import popEditPanel from './popEditPanel';
 
 export default function initModule(extendName) {
   var extendNameWithData = "data-" + extendName;

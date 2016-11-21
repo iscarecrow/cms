@@ -1,6 +1,6 @@
 //数据类型的弹窗
 import embedJs from './embedJs';
-import jQuery from '$';
+import $ from 'jquery';
 
 let dataPopEditPanel = function(extendName) {
   var htmlstr = '',
@@ -8,7 +8,7 @@ let dataPopEditPanel = function(extendName) {
   for (var name in _cmsFocus[extendName]) {
     var itemval = _cmsFocus[extendName][name];
     var showname = name;
-    if(jQuery.isPlainObject(itemval)){
+    if($.isPlainObject(itemval)){
       var propertyStr = '';
       for (var name in itemval) {
         propertyStr += '" '+name+'="'+ itemval[name];

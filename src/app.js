@@ -1,35 +1,12 @@
-// import _ from 'lodash';
-import templateStr from './editor/template';
+import templateStr from './editor/templateStr';
 import $ from 'jquery';
 import sugarPop from './utils/sugarPop';
-// import magnificPopup from 'magnific-popup';
+import embedParent from './editor/embedParent';
+import cmsDataInsertToDom from './editor/cmsDataInsertToDom';
 
 window.$ = $;
 window.sugarPop = sugarPop;
-
-
-/**
- * [embedParent embedJs调用]
- * @type {Object}
- */
-window.embedParent = {
-  popOut: function(pm, n, opt) {
-    sugarPop.alert(pm, 'l', opt);
-    $('#win-house').empty();
-  },
-  popClose: function() {
-    sugarPop.closeMask();
-  },
-  setIframeHeight: function(ht) {
-    iframe.css('height', ht);
-  },
-  reloadModifiedPage: function() {
-    var _htmlStr = removeEditAttr(iframedoc.body.parentNode.outerHTML);
-    iframedoc.write(_htmlStr);
-    iframedoc.close();
-  }
-};
-
+window.embedParent = embedParent;
 
 $(function() {
   let originModConfig = [];
@@ -43,14 +20,13 @@ $(function() {
   function renderModMenu(data) {
     let templateStr = '';
     for (let val of data) {
-      templateStr += `<div class="cms_module_items"><h1>${val.name}</h1><ul>`
+      templateStr += `<div class="cms_cnt_l_inner"><div class="cms_module_items"><h1>${val.name}</h1><ul>`
       for (let inner_mod of val.inner_mods) {
         templateStr += `<li data-id="${inner_mod.id}" class="menu-modues">${inner_mod.name}</li>`
       }
-      templateStr += '</ul></div>';
+      templateStr += '</ul></div><div>';
     }
     $('.cms_cnt_l').html(templateStr);
-    // console.log(templateStr);
   }
 
   function getModConfig() {
@@ -177,6 +153,11 @@ $(function() {
 
   init();
 
+  $D.on('click','#cms-uniteditsub',(e)=>{
+    console.log(e.target);
+    cmsDataInsertToDom();
+  });
+
   $D.on('mouseenter','.menu-modues', function(){
     let $this = $(this);
     let moduleId = $this.data('id');
@@ -189,7 +170,7 @@ $(function() {
     moduleSelect(moduleId);
   });
 
-  $D.on('click', '#cms-addmodule-new', function(){
+  $D.on('click', '.cms-addmodule-new', function(){
     let attr = $(this).attr('direction');
     if (iframewin && iframewin.embedJs.cmsReturnBack) {
       iframewin.embedJs.cmsReturnBack(null, {

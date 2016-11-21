@@ -102,6 +102,12 @@
     return opts;
   };
 
+  cmsTools.removeParam = function(url, pnm) {
+    var reg1 = new RegExp('\\?' + pnm + '(=[^&]*)?');
+    var reg2 = new RegExp('\\&' + pnm + '(=[^&]*)?');
+    return url.replace(reg1, '?').replace(reg2, '').replace(/\?&/, '?').replace(/\?$/, '');
+  };
+
   cmsTools.addParam = function(url, param, value) {
     var re = new RegExp('([&\\?])' + param + '=[^& ]*', 'g');
 

@@ -1,0 +1,199 @@
+.green{
+  color: #a9ca60;
+}
+.pop{
+  position: absolute;
+  top: 0px;
+  background-color: white;
+  left: 100%;
+  width: 100px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+.red{
+  color: red;
+}
+
+
+
+
+/****************************************
+************** debug setting 设置页面 **********
+*****************************************/
+#debug-toppanel{padding:8px 0 12px;}
+#debugfilter{float:left;}
+#debugfilter li{float:left;width:120px;margin:4px 8px 0 4px;}
+#debugfilter li input{float:left;margin:4px 4px 0 0;}
+
+
+
+
+/****************************************
+************** 可视化编辑页面 **********
+*****************************************/
+.h0{
+  overflow: hidden;
+  height: 0;
+}
+#htmlframewrap{
+  clear:both;
+  position: relative;
+  overflow: hidden;
+  padding-bottom:50px;
+}
+#htmlframeclose:after{
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  width: 50px;
+  height:50px;
+  line-height: 48px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'caret';
+  color: #555;
+  content: '\f0d8';
+  background-color: #fff;
+  cursor:pointer;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  user-select:none;
+}
+#htmlframeclose.unfolded:after{
+  content: '\f0d7';
+}
+
+
+
+
+/************** 其它编辑区域 **********/
+.htmlgodirect{
+  display:block;width:100%;height:100%;padding-top:10px;text-align:center;line-height:17px;
+}
+#htmlopenlock{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right:8px;
+  border: 1px solid green;
+  border-radius:7px;
+  text-indent: -9999px;
+  background-color: green; 
+}
+
+
+/************** 弹出编辑框 **********/
+#cms-addmodule-quickly{
+  padding: 8px;
+}
+/* #cms-addmodule-quickly a{
+  margin:0 12px 0 0;
+} */
+
+
+/************** 弹出编辑框 **********/
+.cms-noselect{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cms-clr{
+  zoom: 1;
+}
+.cms-clr:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.cms-unitedit {
+  padding: 12px 0 8px 0;
+}
+.cms-unitedit li {
+  padding: 2px 2px 8px 0px;
+}
+
+.cms-unitedit .cms-imgcrop {
+  float: right;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+}
+.cms-unitedit .cms-imgcrop img{
+  width: 100%;
+}
+
+.cms-unitedit #cms-check-pageweb{
+  float:right;
+  width:90px;
+  margin:0 8px 0 0;
+}
+.cms-unitedit u {
+  text-align: right;
+  float: left;
+  width: 90px;
+  margin-right: 8px;
+}
+
+
+.cms-unitedit input {
+  width: 450px;
+}
+.cms-unitedit .cms-check{
+  padding: 4px 0 0 98px;
+  line-height: 21px;
+}
+.cms-unitedit .cms-check label{
+  display: inline;
+  margin: 0 0 0 4px;
+  font-size: 12px;
+}
+.cms-unitedit .cms-check input{
+  width: auto;
+  vertical-align: top;
+}
+.cms-uniteditbot {
+  padding: 0 0 16px 0;
+}
+
+/* 提交部分 */
+#cms-editvisible-wrap{
+  float: right;
+  width: 60px;
+  padding-top: 6px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  user-select:none;
+}
+#cms-editvisible-wrap input{
+  vertical-align: top;
+}
+#cms-editvisible-wrap label{
+  display: inline;
+  margin-left:4px;
+}
+#cms-uniteditsub {
+  float: right;
+  margin: 0 16px 0 8px;
+  padding: 0 8px;
+  line-height: 29px;
+}
+
+/* gaq 打点部分 */
+#cms-gaq-wrap{
+  padding: 2px 0 0 98px;
+}
+#cms-gaq-wrap input{
+  width: 120px;
+  margin:0 0 0 2px;
+  vertical-align: bottom;
+}

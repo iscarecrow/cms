@@ -9,7 +9,7 @@
 .mask-cont{padding:0 0 0 0}
 .tt-s{height:46px;padding:0;font-size:16px;font-weight:bold;line-height:46px;border-bottom:1px solid #ebebeb;overflow:hidden;color:#606060;text-align: center;position: relative;}
 /* 弹出框的右上关闭按钮 */
-a.mask-close:link, a.mask-close:visited{float:right;width:46px;height:46px;line-height:46px;text-indent:-9999px;background-image: url('/static/images/popclose.png');background-repeat:no-repeat;background-position:15px 15px;position: absolute;right: 0;top: 0;}
+a.mask-close:link, a.mask-close:visited{float:right;width:46px;height:46px;line-height:46px;text-indent:-9999px;background-image: url('/images/popclose.png');background-repeat:no-repeat;background-position:15px 15px;position: absolute;right: 0;top: 0;}
 a.mask-close:hover{background-position:-17px -17px;}
 
 .mask{display:none;width:100%;position:absolute;left:0;top:0;z-index:9999;}

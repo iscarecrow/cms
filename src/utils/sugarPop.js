@@ -1,6 +1,4 @@
-import blockUI from '../plugin/jquery.blockUI';
-// import broswer from '../plugin/browser';
-
+import blockUI from 'block-ui';
 
 function store ($d){
   var $whouse = $('#win-house');

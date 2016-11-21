@@ -1,7 +1,6 @@
 import cmsTools from '../utils/cmsTools';
 import addNewNode from './addNewNode';
 import initModule from './initModule';
-console.log(cmsTools);
 
 let embedJs = {
   /**

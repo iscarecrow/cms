@@ -1,4 +1,4 @@
-import MediumEditor from '../plugin/medium-editor/medium-editor';
+import $ from 'jquery';
 
 export default function addNewNode($target, html, dir) {
   var $copy = $(html);

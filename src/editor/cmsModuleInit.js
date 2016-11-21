@@ -1,6 +1,9 @@
 import $ from 'jquery';
 import embedJs from './embedJs';
+// import a from 'jquery-ui';
 import jqueryUi from '../plugin/jquery-ui.min';
+
+// console.log(a);
 
 let cmsModuleInit = function() {
   let $D = $(document);

@@ -26,7 +26,7 @@
 }
 .cms-icon{
   float: left;
-  margin-right: 5px;
+  margin-right: 10px;
   color: #fff;
   width: 22px;
   height: 22px;
@@ -36,11 +36,15 @@
   font-style:normal;
   text-decoration: none;
   text-align: center;
-  background: green;
+  background: #000;
   border-radius: 50%;
   z-index: 9999;
   cursor:pointer;
   -webkit-transition: -webkit-transform .15s linear;
+}
+.cms-icon:hover{
+  width: 24px;
+  height: 24px;
 }
 .cms-icon:last-child{
   margin-right: 0;

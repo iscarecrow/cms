@@ -51,14 +51,23 @@ a {
   cursor: pointer
 }
  */
+#win-house {
+  display: none
+}
+
+/* 编辑器页面 */
+
+#cms-addmodule-quickly a {
+  display: inline-block;
+  width: 50%;
+  padding: 10px 0;
+}
+
 #embed-iframe {
   max-width: 640px;
   margin: 0 auto;
   display: block;
 }
-#embed-iframe html{
-  background: #fff;
-}
-#win-house {
-  display: none
+#embed-iframe html {
+  background-color:#fff !important;
 }

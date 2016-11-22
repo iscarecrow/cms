@@ -14,6 +14,7 @@ let templateStr = '<!doctype html>\
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">\
       <link rel="stylesheet" href="https://a.dtstatic.com/static/vienna/css/h5-lib.2cdb3642.css">\
       <style type="text/css" id="embed-style">\
+        html,body{background:#fff !important}\
         body,#container{max-width:640px;margin:0 auto;}\
         .cms-module {background: #fff;}\
       </style>\

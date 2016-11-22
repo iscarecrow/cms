@@ -3,8 +3,6 @@ import embedJs from './embedJs';
 // import a from 'jquery-ui';
 import jqueryUi from '../plugin/jquery-ui.min';
 
-// console.log(a);
-
 let cmsModuleInit = function() {
   let $D = $(document);
   // 拖拽功能 module 注入可操作panel，此行代码要先于 jsmodule

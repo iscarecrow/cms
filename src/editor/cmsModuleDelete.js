@@ -7,11 +7,11 @@ let cmsModuleDelete = function() {
   $D.on('click', '.cms-delete', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    var $origin = $(this).closest('.cms-module');
+    let $origin = $(this).closest('.cms-module');
     // 如果删除掉此 .cms-module 之后，页面上没有其它的 .cms-module
     // 则阻止此次删除
     $origin.addClass('cms-module-tobedelete'); 
-    var $moduleremain = $('.cms-module').not('.cms-module-tobedelete,.cms-module-tobedelete .cms-module');
+    let $moduleremain = $('.cms-module').not('.cms-module-tobedelete,.cms-module-tobedelete .cms-module');
     if ($moduleremain.length === 0) {
       alert('最后一个模块不可删除！');
       $origin.removeClass('cms-module-tobedelete');
@@ -19,8 +19,8 @@ let cmsModuleDelete = function() {
     }
     $origin.fadeOut(function() {
       $origin.remove();
-      // embedJs.cmsSetSelfHeight();
-      var _name = $origin.data('name');
+      embedJs.cmsSetSelfHeight();
+      let _name = $origin.data('name');
       //是否是重复模块
       if ($D.find('[data-name="' + _name + '"]').length === 0) {
         $('[for-mod="' + _name + '"]').remove();

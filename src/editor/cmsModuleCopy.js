@@ -18,46 +18,32 @@ let cmsModuleCopy = function() {
   let $D = $(document);
   if (localStorage) {
     $D.on('click', '.cms-copy', function(e) {
-      var $t = $(this);
-      var $origin = $t.closest('.cms-module');
+      let $t = $(this);
+      let $origin = $t.closest('.cms-module');
       $t.addClass('cms-icon-trans');
       // 保存html代码块到 localStorage
-      var html = $origin.get(0).outerHTML;
-      //富文本编辑class滤掉
-      // html = html.replace(/<[a-zA-Z0-9]+ [^>]*\bclass=[\'\"][^\'\"]*\bmedium-editor-element\b[^\'\"]*[\'\"][^>]*>/ig, function(a, b) {//富文本编辑属性全部去掉
-      //   var ret = a.replace(/ contenteditable=[\'\"][\w\W]*?[\'\"]/ig, '')
-      //   .replace(/ spellcheck=[\'\"][\w\W]*?[\'\"]/ig, '')
-      //   .replace(/ data-medium-editor-element=[\'\"][\w\W]*?[\'\"]/ig, '')
-      //   .replace(/ role=[\'\"][\w\W]*?[\'\"]/ig, '')
-      //   .replace(/ aria-multiline=[\'\"][\w\W]*?[\'\"]/ig, '')
-      //   .replace(/ data-medium-editor-editor-index=[\'\"][\w\W]*?[\'\"]/ig, '')
-      //   .replace(/ medium-editor-index=[\'\"][\w\W]*?[\'\"]/ig, '')
-      //   .replace(/ data-placeholder=[\'\"][\w\W]*?[\'\"]/ig, '')
-      //   .replace(/ data-medium-focused=[\'\"][\w\W]*?[\'\"]/ig, '')
-      //   .replace(/medium-editor-placeholder/ig, '');
-
-      //   return ret;
-      // }).replace(/([^>]*\bclass=[\'\"][^\'\"]*)\bmedium-editor-element\b/ig,'$1')
-
+      let html = $origin.get(0).outerHTML;
       localStorage.setItem('cms-copy', html);
       // 清理掉之前保存的内容
       localStorage.setItem('cms-copy-style', '');
       localStorage.setItem('cms-copy-script', '');
       let classes = $origin.attr('class');
+
       if (classes.indexOf('cpmodule-') == -1) {
+        // 以前错误的问题
         alert('您复制的模块不是标准模块，请尽量在本页使用，拷贝到其它页面可能会出现样式丢失。');
       } else {
+
         let cpmodule = getClassName(classes) || '';
 
+        // 子模块处理逻辑，此处可删除
         if (cpmodule) {
           // 保存模块对应的 style 到 localStorage
           let headhtml = $('head').html();
-
           if (headhtml) {
             let relatedModules = [cpmodule];
             let styles = '';
             let inscript = '';
-
             // 寻找子模块
             $origin.find('.cms-module').each(function(i, el) {
               let $el = $(el);
@@ -115,6 +101,7 @@ let cmsModuleCopy = function() {
           }
         }
       }
+
       window.clearTimeout($.data($t, 'timer'));
       $.data($t, 'timer', window.setTimeout(function() {
         $t.removeClass('cms-icon-trans');

@@ -6,7 +6,6 @@ import setNavigationShoppingCar from './part/setNavigationShoppingCar';
 import setNavigationShare from './part/setNavigationShare';
 import expireTime from './part/expireTime';
 
-
 // 模块初始化
 import cmsModuleInit from './editor/cmsModuleInit';
 // 模块添加

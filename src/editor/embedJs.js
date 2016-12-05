@@ -48,8 +48,8 @@ let embedJs = {
   },
   cmsSetSelfHeight: function() {
     if (parent && parent.embedParent.setIframeHeight) {
-      var _height = 50;
-      for (var i = document.body.children.length; i > 0; i--) {
+      let _height = 10;
+      for (let i = document.body.children.length; i > 0; i--) {
         _height += document.body.children[i - 1].offsetHeight;
       }
       parent.embedParent.setIframeHeight(_height);
@@ -61,8 +61,8 @@ let embedJs = {
     }
   },
   cmsProperateImageWidth: function(oldwidth) {
-    var width = 900;
-    for (var i = 1; i < 10; i++) {
+    let width = 900;
+    for (let i = 1; i < 10; i++) {
       if (oldwidth < i * 100) {
         width = i * 100;
         break;
@@ -87,7 +87,6 @@ let embedJs = {
     this.cmsDomCache.clear();
   },
   cmsReturnBack: function(arr, opt) {
-
     $(arr).each(function(i, obj) {
       var elem = embedJs.cmsDomCache[obj.el];
       if (elem) {
@@ -270,7 +269,9 @@ let embedJs = {
         alert('要添加的模块为唯一模块，该唯一模块已经存在，不能再添加了.');
         return;
       }
+
       addNewNode(cmsFocus._root, $newhtml, dir);
+
       if (newstyle) {
         var $head = $('head');
         var headhtml = $head.html();

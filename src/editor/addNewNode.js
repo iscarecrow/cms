@@ -1,6 +1,10 @@
 import $ from 'jquery';
 
 export default function addNewNode($target, html, dir) {
+  console.log('target');
+  console.log($target);
+  console.log('dir');
+  console.log(dir);
   var $copy = $(html);
   var $copywrap = $('<div></div>');
   if (dir == 'down') {
@@ -25,8 +29,9 @@ export default function addNewNode($target, html, dir) {
       "height": opheight
     }, function() {
       $copy.removeClass('cms-animating').unwrap();
-      // embedJs.cmsSetSelfHeight();
+      embedJs.cmsSetSelfHeight();
     });
+
   // 拖拽功能 module 注入可操作panel，此行代码要先于 jsmodule
   $('.cms-module').parent().sortable({ handle: ".cms-show-tool" });
   $('.cms-show-tool').disableSelection();  
